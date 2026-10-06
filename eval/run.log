@@ -1,0 +1,6 @@
+2026-10-06T05:27:18Z run start split=dev claims=10 cells=60 model=llama-3.3-70b-fp8-fast ledger_rows=54 cap=1800 deadline=2026-10-06T08:26:43Z
+2026-10-06T05:28:10Z progress 25/60 new=25 cached=0 fail=0 stopped=0 ledger_rows=83
+2026-10-06T05:29:00Z progress 50/60 new=50 cached=0 fail=0 stopped=0 ledger_rows=107
+2026-10-06T05:29:22Z run end split=dev {'new': 60} http_calls_this_run=60 wall=123s
+2026-10-06T05:29:22Z DRY RUN: 60 HTTP calls for 10 claims = 6.00 calls/claim (6.00 = no retries), 2.06 s/call, HTTP latency p50=2.0s p90=3.6s, workers=4
+2026-10-06T05:29:22Z PROJECTION rest of plan (190 claims): ~1140 calls, ~39 min; total incl. dry run: ~1200 calls, ~41 min (proceed if < 120 min)

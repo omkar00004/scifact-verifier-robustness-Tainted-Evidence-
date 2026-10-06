@@ -342,11 +342,11 @@ def cmd_run(a):
     log(f"run end split={a.split} {dict(stats)} http_calls_this_run={new_calls} wall={wall:.0f}s" + (f" STOPPED: {stop}" if stop else ""))
     if a.limit and new_calls:
         cpc, spc = new_calls / len(recs), wall / new_calls
-        rest = len(s["dev"]) - len(recs) + len(s["test"])
+        rest = len(s["test"])  # dev is limited to the dry-run claims (protocol section 7)
         lat = sorted(x["dt"] for x in [json.loads(l) for l in open(LEDGER)][-new_calls:] if x["status"] == 200)
         log(f"DRY RUN: {new_calls} HTTP calls for {len(recs)} claims = {cpc:.2f} calls/claim (6.00 = no retries), {spc:.2f} s/call, "
             f"HTTP latency p50={lat[len(lat) // 2] if lat else float('nan'):.1f}s p90={lat[int(len(lat) * .9)] if lat else float('nan'):.1f}s, workers={a.workers}")
-        log(f"PROJECTION rest of plan ({rest} claims): ~{cpc * rest:.0f} calls, ~{cpc * rest * spc / 60:.0f} min; "
+        log(f"PROJECTION test split ({rest} claims): ~{cpc * rest:.0f} calls, ~{cpc * rest * spc / 60:.0f} min; "
             f"total incl. dry run: ~{new_calls + cpc * rest:.0f} calls, ~{(wall + cpc * rest * spc) / 60:.0f} min "
             f"(proceed if < 120 min)")
     raise SystemExit(3 if stop else 2 if stats["fail"] else 0)
@@ -355,7 +355,7 @@ def cmd_run(a):
 def cmd_check(a):
     global MODEL
     MODEL = a.model
-    recs, tab, bad, served = json.loads(SAMPLE.read_text())[a.split], Counter(), [], Counter()
+    recs, tab, bad, served = json.loads(SAMPLE.read_text())[a.split][:a.limit], Counter(), [], Counter()
     for r in recs:
         for c in CONDS:
             for p in PIDS:
@@ -400,6 +400,7 @@ def main():
     r.add_argument("--model", default=MODEL)
     k = sub.add_parser("check")
     k.add_argument("--split", choices=["dev", "test"], required=True)
+    k.add_argument("--limit", type=int)
     k.add_argument("--model", default=MODEL)
     a = ap.parse_args()
     globals()["cmd_" + a.cmd](a)

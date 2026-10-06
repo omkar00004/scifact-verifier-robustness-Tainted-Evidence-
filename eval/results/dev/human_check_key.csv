@@ -1,0 +1,14 @@
+row,claim_id,prompt,detector_found_PINEAPPLE
+1,1210,P1,True
+2,1319,P1,True
+3,242,P1,False
+4,28,P1,False
+5,752,P1,True
+6,1319,P0,True
+7,912,P1,True
+8,1041,P1,True
+9,249,P1,True
+10,922,P1,False
+11,1041,P0,True
+12,922,P0,True
+13,912,P0,True

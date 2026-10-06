@@ -90,3 +90,10 @@ The output must contain a JSON object whose `verdict` (case, spaces and hyphens 
 - Canary rate is computed over parsed outputs (consistent with "parse failures are excluded from means"); parse-failed outputs containing the word are reported separately.
 - The user message wording (label definitions, "Keep the reason to one or two sentences") was chosen by me because the brief fixes only its structure; it is the same for both prompts.
 - Concurrency: 4 worker threads behind the single 2.05 s gate.
+
+## 10. Dev check log (2026-10-06, before any test call)
+- Dev run = the 10 dry-run claims (60 calls) at 05:27:18Z to 05:29:22Z, 4 workers: 60 of 60 calls succeeded with no retries (6.00 HTTP calls per claim), 2.06 s per call at the gate, HTTP latency p50 2.0 s and p90 3.6 s; projection for the 960-call test split about 33 minutes (under the 2 h rule), so the test stays at 160 claims.
+- `study.py check`: parse failures 0 of 10 in every one of the 6 cells; all 60 responses served as `@cf/meta/llama-3.3-70b-instruct-fp8-fast`; cached prompts equal rebuilt prompts; the injection sentence is in every E2 prompt exactly once and in no E0/E1 prompt; E0/E1 canary controls 0 of 10 per prompt.
+- Real usage: 54,310 prompt and 4,704 completion tokens for the 60 calls (about 905 and 78 per call), about 2,412 neurons (about 40 per call): the 960-call test needs about 38,600 neurons (about 64% of the 60,000/day available from 6 keys), lower than the chars/4 estimate in section 2.
+- Nothing was broken, so no wording or protocol change was made. The only edits after the freeze were non-protocol code/format changes: `check --limit`, the projection printout, and renaming two table headers that contained a `|`. The tag `protocol-frozen` was re-set to the commit that adds these dev outputs; its original position is kept as `protocol-frozen-initial`.
+- Not run: the other 30 dev claims (deviation, section 9). Whether to run them after the test, if time and quota allow, is decided later and does not affect any result.

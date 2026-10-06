@@ -114,7 +114,7 @@ def main():
             t.append([p, c, N, n_pres, len(rs), fails, rate([r["correct"] for r in rs]), rate([r["verdict"] == NEI for r in rs]),
                       rate([r["correct"] for r in rs if r["gold"] == "SUPPORTS"]), rate([r["correct"] for r in rs if r["gold"] == "CONTRADICTS"]), flag])
     md += ["## 1. Accuracy per cell (NOT_ENOUGH_INFO counts as wrong; parse failures excluded)"] + table(
-        ["prompt", "evidence", "claims", "responses", "parsed", "parse fail", "accuracy [95% CI] (k/n)", "abstention (NEI) rate", "accuracy | gold SUPPORTS", "accuracy | gold CONTRADICTS", "flag"], t)
+        ["prompt", "evidence", "claims", "responses", "parsed", "parse fail", "accuracy [95% CI] (k/n)", "abstention (NEI) rate", "accuracy, gold SUPPORTS", "accuracy, gold CONTRADICTS", "flag"], t)
 
     # ---- 2. paired accuracy differences
     t = []

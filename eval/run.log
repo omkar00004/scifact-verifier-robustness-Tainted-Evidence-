@@ -49,3 +49,43 @@
 2026-10-06T05:55:49Z progress 925/960 new=696 cached=0 fail=5 stopped=224 ledger_rows=825
 2026-10-06T05:55:49Z progress 950/960 new=696 cached=0 fail=5 stopped=249 ledger_rows=825
 2026-10-06T05:56:36Z run end split=test {'new': 696, 'fail': 5, 'stop': 259} http_calls_this_run=711 wall=1551s STOPPED: stop:5 consecutive 429s with Retry-After > 120 s (daily quota of every key exhausted?)
+2026-10-06T06:02:20Z run start split=test claims=160 cells=960 model=llama-3.3-70b-fp8-fast ledger_rows=829 cap=1800 deadline=2026-10-06T08:26:43Z
+2026-10-06T06:02:20Z progress 25/960 new=0 cached=25 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 50/960 new=0 cached=50 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 75/960 new=0 cached=75 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 100/960 new=0 cached=100 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 125/960 new=0 cached=125 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 150/960 new=0 cached=150 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 175/960 new=0 cached=175 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 200/960 new=0 cached=200 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 225/960 new=0 cached=225 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 250/960 new=0 cached=250 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 275/960 new=0 cached=275 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 300/960 new=0 cached=300 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 325/960 new=0 cached=325 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 350/960 new=0 cached=350 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 375/960 new=0 cached=375 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 400/960 new=0 cached=400 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 425/960 new=0 cached=425 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 450/960 new=0 cached=450 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 475/960 new=0 cached=475 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 500/960 new=0 cached=500 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 525/960 new=0 cached=525 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 550/960 new=0 cached=550 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 575/960 new=0 cached=575 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 600/960 new=0 cached=600 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 625/960 new=0 cached=625 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 650/960 new=0 cached=650 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:20Z progress 675/960 new=0 cached=675 fail=0 stopped=0 ledger_rows=829
+2026-10-06T06:02:31Z progress 700/960 new=4 cached=696 fail=0 stopped=0 ledger_rows=833
+2026-10-06T06:03:29Z progress 725/960 new=29 cached=696 fail=0 stopped=0 ledger_rows=858
+2026-10-06T06:04:38Z progress 750/960 new=54 cached=696 fail=0 stopped=0 ledger_rows=883
+2026-10-06T06:05:45Z progress 775/960 new=79 cached=696 fail=0 stopped=0 ledger_rows=908
+2026-10-06T06:06:45Z progress 800/960 new=104 cached=696 fail=0 stopped=0 ledger_rows=933
+2026-10-06T06:07:52Z progress 825/960 new=129 cached=696 fail=0 stopped=0 ledger_rows=958
+2026-10-06T06:08:49Z progress 850/960 new=154 cached=696 fail=0 stopped=0 ledger_rows=983
+2026-10-06T06:09:53Z progress 875/960 new=179 cached=696 fail=0 stopped=0 ledger_rows=1008
+2026-10-06T06:10:51Z progress 900/960 new=204 cached=696 fail=0 stopped=0 ledger_rows=1033
+2026-10-06T06:11:50Z progress 925/960 new=229 cached=696 fail=0 stopped=0 ledger_rows=1058
+2026-10-06T06:12:52Z progress 950/960 new=254 cached=696 fail=0 stopped=0 ledger_rows=1083
+2026-10-06T06:13:24Z run end split=test {'cached': 696, 'new': 264} http_calls_this_run=264 wall=664s

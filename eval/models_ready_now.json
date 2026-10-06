@@ -1340,6 +1340,35 @@
    ]
   },
   {
+   "id": "llama-3.3-70b-fp8-fast",
+   "object": "model",
+   "created": 0,
+   "owned_by": "freellmapi",
+   "name": "Llama 3.3 70B fp8-fast",
+   "context_window": 24000,
+   "context_length": 24000,
+   "available": true,
+   "unavailable_reason": null,
+   "execution_status": "ready",
+   "supported_parameters": [
+    "temperature",
+    "top_p",
+    "max_tokens",
+    "max_completion_tokens",
+    "stop",
+    "stream",
+    "top_k",
+    "seed",
+    "presence_penalty",
+    "frequency_penalty",
+    "repetition_penalty",
+    "response_format",
+    "tools",
+    "tool_choice",
+    "parallel_tool_calls"
+   ]
+  },
+  {
    "id": "llama-4-scout",
    "object": "model",
    "created": 0,

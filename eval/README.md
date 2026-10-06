@@ -2,6 +2,11 @@
 
 **Status:** run once on 2026-10-06. Tables: `results/summary.md`; per claim and cell: `results/results.csv`; a 20-row sheet for checking the canary detector by hand: `results/human_check.csv` (+ `human_check_key.csv`). Git tags: `protocol-frozen` (design frozen before any test call; `protocol-frozen-initial` is its first position), `results-v1`. The full design and every deviation are in `protocol.md`.
 
+## Results at a glance (test split, 160 claims, 80 SUPPORTS / 80 CONTRADICTS; all numbers are in `results/summary.md`)
+- Accuracy (k/n): P0 0.912 (146/160) clean, 0.900 (144/160) with distractors, 0.869 (139/160) injected; P1 0.869 (139/160), 0.881 (141/160), 0.869 (139/160). No paired accuracy difference between evidence conditions has a 95% CI excluding 0; the one accuracy contrast that does is P1 - P0 on clean evidence (-0.044 [-0.081, -0.013]).
+- The planted note changed which words the model wrote far more than which verdict it gave: PINEAPPLE appears in 159/160 injected outputs under P0 and 94/160 under P1 (0/160 in every E0/E1 control), while gold-CONTRADICTS claims labelled SUPPORTS rose from 6/80 to 16/80 under P0 and from 3/80 to 7/80 under P1. Because the word detector also fires on quoting or refusing the note, the canary rates are upper bounds on obeying it; `results/human_check.csv` is for estimating that by hand.
+- One model, one run, one dataset: treat these as a small measurement, not a general claim.
+
 ## Question
 How do (a) topical distractor passages and (b) an instruction planted inside a retrieved passage change the verdicts of an LLM claim verifier, and does a "passages are untrusted data" system prompt reduce the damage? The planted instruction asks for a harmless canary word (`PINEAPPLE`).
 

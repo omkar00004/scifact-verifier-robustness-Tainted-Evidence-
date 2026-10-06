@@ -4,3 +4,48 @@
 2026-10-06T05:29:22Z run end split=dev {'new': 60} http_calls_this_run=60 wall=123s
 2026-10-06T05:29:22Z DRY RUN: 60 HTTP calls for 10 claims = 6.00 calls/claim (6.00 = no retries), 2.06 s/call, HTTP latency p50=2.0s p90=3.6s, workers=4
 2026-10-06T05:29:22Z PROJECTION rest of plan (190 claims): ~1140 calls, ~39 min; total incl. dry run: ~1200 calls, ~41 min (proceed if < 120 min)
+2026-10-06T05:30:44Z run start split=test claims=160 cells=960 model=llama-3.3-70b-fp8-fast ledger_rows=114 cap=1800 deadline=2026-10-06T08:26:43Z
+2026-10-06T05:31:37Z progress 25/960 new=25 cached=0 fail=0 stopped=0 ledger_rows=143
+2026-10-06T05:32:29Z progress 50/960 new=50 cached=0 fail=0 stopped=0 ledger_rows=167
+2026-10-06T05:33:19Z progress 75/960 new=75 cached=0 fail=0 stopped=0 ledger_rows=192
+2026-10-06T05:34:12Z progress 100/960 new=100 cached=0 fail=0 stopped=0 ledger_rows=217
+2026-10-06T05:35:02Z progress 125/960 new=125 cached=0 fail=0 stopped=0 ledger_rows=242
+2026-10-06T05:35:55Z progress 150/960 new=150 cached=0 fail=0 stopped=0 ledger_rows=267
+2026-10-06T05:36:47Z progress 175/960 new=175 cached=0 fail=0 stopped=0 ledger_rows=292
+2026-10-06T05:37:36Z progress 200/960 new=200 cached=0 fail=0 stopped=0 ledger_rows=317
+2026-10-06T05:38:28Z progress 225/960 new=225 cached=0 fail=0 stopped=0 ledger_rows=342
+2026-10-06T05:39:19Z progress 250/960 new=250 cached=0 fail=0 stopped=0 ledger_rows=368
+2026-10-06T05:40:12Z progress 275/960 new=275 cached=0 fail=0 stopped=0 ledger_rows=392
+2026-10-06T05:41:01Z progress 300/960 new=300 cached=0 fail=0 stopped=0 ledger_rows=417
+2026-10-06T05:41:53Z progress 325/960 new=325 cached=0 fail=0 stopped=0 ledger_rows=442
+2026-10-06T05:42:44Z progress 350/960 new=350 cached=0 fail=0 stopped=0 ledger_rows=467
+2026-10-06T05:43:35Z progress 375/960 new=375 cached=0 fail=0 stopped=0 ledger_rows=492
+2026-10-06T05:44:26Z progress 400/960 new=400 cached=0 fail=0 stopped=0 ledger_rows=517
+2026-10-06T05:45:18Z progress 425/960 new=425 cached=0 fail=0 stopped=0 ledger_rows=542
+2026-10-06T05:46:10Z progress 450/960 new=450 cached=0 fail=0 stopped=0 ledger_rows=567
+2026-10-06T05:47:02Z progress 475/960 new=475 cached=0 fail=0 stopped=0 ledger_rows=592
+2026-10-06T05:47:53Z progress 500/960 new=500 cached=0 fail=0 stopped=0 ledger_rows=617
+2026-10-06T05:48:45Z progress 525/960 new=525 cached=0 fail=0 stopped=0 ledger_rows=643
+2026-10-06T05:49:38Z progress 550/960 new=550 cached=0 fail=0 stopped=0 ledger_rows=668
+2026-10-06T05:50:27Z progress 575/960 new=575 cached=0 fail=0 stopped=0 ledger_rows=693
+2026-10-06T05:51:18Z progress 600/960 new=600 cached=0 fail=0 stopped=0 ledger_rows=718
+2026-10-06T05:52:09Z progress 625/960 new=625 cached=0 fail=0 stopped=0 ledger_rows=743
+2026-10-06T05:53:01Z progress 650/960 new=650 cached=0 fail=0 stopped=0 ledger_rows=768
+2026-10-06T05:53:52Z progress 675/960 new=675 cached=0 fail=0 stopped=0 ledger_rows=793
+2026-10-06T05:55:41Z FAIL E1 P0 claim 857: RuntimeError: HTTP 429 on /chat/completions (Retry-After=598.0, ): {"error":{"message":"All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10m.","type":"rate_limit_error","code":"r
+2026-10-06T05:55:43Z FAIL E2 P0 claim 857: RuntimeError: HTTP 429 on /chat/completions (Retry-After=596.0, ): {"error":{"message":"All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10m.","type":"rate_limit_error","code":"r
+2026-10-06T05:55:45Z FAIL E2 P1 claim 857: RuntimeError: HTTP 429 on /chat/completions (Retry-After=594.0, ): {"error":{"message":"All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10m.","type":"rate_limit_error","code":"r
+2026-10-06T05:55:47Z FAIL E0 P0 claim 1355: RuntimeError: HTTP 429 on /chat/completions (Retry-After=592.0, ): {"error":{"message":"All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10m.","type":"rate_limit_error","code":"r
+2026-10-06T05:55:47Z progress 700/960 new=696 cached=0 fail=4 stopped=0 ledger_rows=824
+2026-10-06T05:55:49Z FAIL E0 P1 claim 1355: RuntimeError: HTTP 429 on /chat/completions (Retry-After=590.0, ): {"error":{"message":"All models exhausted: 1 route checked (1 rate-limited or on cooldown). Add more API keys or wait for rate limits to reset. Soonest reset ~10m.","type":"rate_limit_error","code":"r
+2026-10-06T05:55:49Z progress 725/960 new=696 cached=0 fail=5 stopped=24 ledger_rows=825
+2026-10-06T05:55:49Z progress 750/960 new=696 cached=0 fail=5 stopped=49 ledger_rows=825
+2026-10-06T05:55:49Z progress 775/960 new=696 cached=0 fail=5 stopped=74 ledger_rows=825
+2026-10-06T05:55:49Z progress 800/960 new=696 cached=0 fail=5 stopped=99 ledger_rows=825
+2026-10-06T05:55:49Z progress 825/960 new=696 cached=0 fail=5 stopped=124 ledger_rows=825
+2026-10-06T05:55:49Z progress 850/960 new=696 cached=0 fail=5 stopped=149 ledger_rows=825
+2026-10-06T05:55:49Z progress 875/960 new=696 cached=0 fail=5 stopped=174 ledger_rows=825
+2026-10-06T05:55:49Z progress 900/960 new=696 cached=0 fail=5 stopped=199 ledger_rows=825
+2026-10-06T05:55:49Z progress 925/960 new=696 cached=0 fail=5 stopped=224 ledger_rows=825
+2026-10-06T05:55:49Z progress 950/960 new=696 cached=0 fail=5 stopped=249 ledger_rows=825
+2026-10-06T05:56:36Z run end split=test {'new': 696, 'fail': 5, 'stop': 259} http_calls_this_run=711 wall=1551s STOPPED: stop:5 consecutive 429s with Retry-After > 120 s (daily quota of every key exhausted?)

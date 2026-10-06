@@ -17,6 +17,7 @@ MODEL = "llama-3.3-70b-fp8-fast"  # aggregator id; Cloudflare Workers AI @cf/met
 ROUTE = "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast"  # every response must be served by this upstream or the run halts; "" = not enforced (recon/smoke)
 BASE = os.environ.get("NIM_BASE_URL", "http://127.0.0.1:31415/v1")
 EXTRA = {}  # extra request-body fields (e.g. a thinking switch); empty in the frozen protocol unless recorded there
+BREAKER = 5  # halt the run after this many consecutive upstream failures (a resume after an outage uses 2)
 GAP = 2.05  # seconds between request starts => <= 29.3 requests/min, under the 30/min cap
 WORKERS = 4  # concurrent in-flight requests; the shared gate() still enforces GAP
 MAX_CALLS = 1800
@@ -61,7 +62,7 @@ def h(*parts):
 _lock = threading.Lock()
 _next_slot = 0.0
 _halt = None  # set when a response comes from the wrong upstream or quota is exhausted: stops every worker
-_hard429 = 0  # consecutive 429s whose Retry-After exceeds 120 s
+_bad = 0  # consecutive upstream failures (5xx, network errors, 429 with Retry-After > 120 s); reset by any success
 _ncalls = sum(1 for _ in open(LEDGER)) if LEDGER.exists() else 0  # ledger rows from earlier invocations count toward the cap
 
 
@@ -112,7 +113,7 @@ PROV = ("X-Routed-Via", "X-Provider", "X-Model", "X-Fallback-Attempts", "X-Fallb
 def call(method, path, body=None, **tag):
     """One logical request with retry on 429/5xx/network errors (exponential backoff).
     A 429 whose Retry-After exceeds 120 s (provider cooldown / out of credits) is not retried. Returns (text, latency_s, provenance)."""
-    global _hard429, _halt
+    global _bad, _halt
     for k in range(6):
         gate()
         st, hd, tx, dt = http(method, path, body)
@@ -121,15 +122,16 @@ def call(method, path, body=None, **tag):
                      or (st == 200 and method == "POST" and '"choices"' not in tx))  # 200 with an error payload
         ledger(ep=path, status=st, dt=round(dt, 2), n=k, prov=prov or None, **tag)
         if st == 200 and not transient:
-            _hard429 = 0
+            _bad = 0
             return tx, dt, prov
         ra = hd.get("Retry-After", "") if hd else ""
         ra = float(ra) if ra.replace(".", "", 1).isdigit() else None
-        if st == 429 and ra is not None and ra > 120:  # provider cooldown / daily quota gone: retrying cannot help
-            _hard429 += 1
-            if _hard429 >= 5:
-                _halt = "5 consecutive 429s with Retry-After > 120 s (daily quota of every key exhausted?)"
-        if not transient or (st == 429 and ra is not None and ra > 120):
+        hard = st == 429 and ra is not None and ra > 120  # provider cooldown / daily quota gone: retrying cannot help
+        if hard or st == 0 or 500 <= st < 600:  # upstream trouble: stop early so the aggregator's escalating cooldown is not made worse
+            _bad += 1
+            if _bad >= BREAKER:
+                _halt = f"{_bad} consecutive upstream failures (last: HTTP {st}); stopping to avoid escalating the provider cooldown"
+        if not transient or hard:
             raise RuntimeError(f"HTTP {st} on {path} (Retry-After={ra}, {prov.get('X-Fallback-Trail', '')}): {tx[:200]}")
         time.sleep(min(120.0, ra if ra is not None else 2.0 * 2 ** k) + random.random())
     raise RuntimeError(f"gave up after 6 tries on {path} (last status {st})")
@@ -313,7 +315,8 @@ def cmd_prepare(a):
 
 
 def cmd_run(a):
-    global MODEL, MAX_CALLS
+    global MODEL, MAX_CALLS, BREAKER
+    BREAKER = a.breaker
     assert a.model != "TBD" and ROUTE, "set MODEL and ROUTE in study.py (recorded in protocol.md) before running the study"
     MODEL, MAX_CALLS = a.model, a.max_calls
     s = json.loads(SAMPLE.read_text())
@@ -396,6 +399,7 @@ def main():
     r.add_argument("--split", choices=["dev", "test"], required=True)
     r.add_argument("--limit", type=int, help="first N claims only (dry run)")
     r.add_argument("--max-calls", type=int, default=1800)
+    r.add_argument("--breaker", type=int, default=BREAKER, help="halt after this many consecutive upstream failures")
     r.add_argument("--workers", type=int, default=WORKERS, help="concurrent in-flight requests (the 2.05 s gate still applies)")
     r.add_argument("--model", default=MODEL)
     k = sub.add_parser("check")

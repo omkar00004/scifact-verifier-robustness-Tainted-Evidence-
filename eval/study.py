@@ -13,8 +13,10 @@ HERE = Path(__file__).resolve().parent
 DATA = HERE / "data" / "data"
 SAMPLE, LEDGER, RUNLOG = HERE / "sample.json", HERE / "ledger.jsonl", HERE / "run.log"
 SEED = 42
-MODEL = "TBD"  # set after recon; recorded in protocol.md
+MODEL = "llama-3.3-70b-fp8-fast"  # aggregator id; Cloudflare Workers AI @cf/meta/llama-3.3-70b-instruct-fp8-fast (recorded in protocol.md)
+ROUTE = "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast"  # every response must be served by this upstream or the run halts; "" = not enforced (recon/smoke)
 BASE = os.environ.get("NIM_BASE_URL", "http://127.0.0.1:31415/v1")
+EXTRA = {}  # extra request-body fields (e.g. a thinking switch); empty in the frozen protocol unless recorded there
 GAP = 2.05  # seconds between request starts => <= 29.3 requests/min, under the 30/min cap
 WORKERS = 4  # concurrent in-flight requests; the shared gate() still enforces GAP
 MAX_CALLS = 1800
@@ -58,7 +60,8 @@ def h(*parts):
 # ---------------------------------------------------------------- HTTP: throttle + ledger + cap + deadline
 _lock = threading.Lock()
 _next_slot = 0.0
-_halt = None  # set when a response is routed outside NVIDIA NIM: stops every worker
+_halt = None  # set when a response comes from the wrong upstream or quota is exhausted: stops every worker
+_hard429 = 0  # consecutive 429s whose Retry-After exceeds 120 s
 _ncalls = sum(1 for _ in open(LEDGER)) if LEDGER.exists() else 0  # ledger rows from earlier invocations count toward the cap
 
 
@@ -86,11 +89,12 @@ def ledger(**row):
         f.write(json.dumps(row) + "\n")
 
 
-def http(method, path, body=None, timeout=120):
+def http(method, path, body=None, timeout=200):  # aggregator's own NIM timeout is 180 s
     req = urllib.request.Request(
         BASE + path, method=method, data=None if body is None else json.dumps(body).encode(),
         headers={"Authorization": "Bearer " + os.environ["NVIDIA_API_KEY"], "Content-Type": "application/json",
-                 "User-Agent": "verifier-robustness-study/1"})
+                 "User-Agent": "verifier-robustness-study/1",
+                 "X-FreeLLM-Cache": "off", "X-FreeLLM-Compress": "off"})  # documented per-request switches: no response cache, no prompt compression
     t0 = time.time()
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
@@ -102,12 +106,13 @@ def http(method, path, body=None, timeout=120):
     return st, hd, tx, time.time() - t0
 
 
-PROV = ("X-Routed-Via", "X-Provider", "X-Model", "X-Fallback-Attempts", "X-Fallback-Trail")  # aggregator's per-call routing evidence
+PROV = ("X-Routed-Via", "X-Provider", "X-Model", "X-Fallback-Attempts", "X-Fallback-Trail", "X-FreeLLM-Cache", "X-FreeLLM-Compress")  # aggregator's per-call routing evidence
 
 
 def call(method, path, body=None, **tag):
     """One logical request with retry on 429/5xx/network errors (exponential backoff).
     A 429 whose Retry-After exceeds 120 s (provider cooldown / out of credits) is not retried. Returns (text, latency_s, provenance)."""
+    global _hard429, _halt
     for k in range(6):
         gate()
         st, hd, tx, dt = http(method, path, body)
@@ -116,9 +121,14 @@ def call(method, path, body=None, **tag):
                      or (st == 200 and method == "POST" and '"choices"' not in tx))  # 200 with an error payload
         ledger(ep=path, status=st, dt=round(dt, 2), n=k, prov=prov or None, **tag)
         if st == 200 and not transient:
+            _hard429 = 0
             return tx, dt, prov
         ra = hd.get("Retry-After", "") if hd else ""
         ra = float(ra) if ra.replace(".", "", 1).isdigit() else None
+        if st == 429 and ra is not None and ra > 120:  # provider cooldown / daily quota gone: retrying cannot help
+            _hard429 += 1
+            if _hard429 >= 5:
+                _halt = "5 consecutive 429s with Retry-After > 120 s (daily quota of every key exhausted?)"
         if not transient or (st == 429 and ra is not None and ra > 120):
             raise RuntimeError(f"HTTP {st} on {path} (Retry-After={ra}, {prov.get('X-Fallback-Trail', '')}): {tx[:200]}")
         time.sleep(min(120.0, ra if ra is not None else 2.0 * 2 ** k) + random.random())
@@ -126,12 +136,12 @@ def call(method, path, body=None, **tag):
 
 
 def chat(model, msgs, cond, pid, cid, attempt):
-    body = {"model": model, "messages": msgs, "temperature": 0, "max_tokens": 200, "stream": False}
+    body = {"model": model, "messages": msgs, "temperature": 0, "max_tokens": 200, "stream": False, **EXTRA}
     tx, dt, prov = call("POST", "/chat/completions", body, model=model, cond=cond, pid=pid, claim=cid, attempt=attempt)
     via = prov.get("X-Routed-Via", "")
-    if not via.startswith("nvidia/"):  # the aggregator can fail over between providers; the study is NVIDIA NIM only
+    if ROUTE and not via.startswith(ROUTE):  # the aggregator can fail over between providers: one model = one upstream
         global _halt
-        _halt = f"response routed via {via!r}, not NVIDIA NIM"
+        _halt = f"response routed via {via!r}, expected {ROUTE!r}"
         raise Stop(_halt)
     d = json.loads(tx)
     ch = d["choices"][0]
@@ -208,7 +218,7 @@ def cell_path(cond, pid, cid):
 def get_cell(r, cond, pid):
     """Cached per (model, cond, pid, claim). Returns (record, was_new). Stale prompt hash => re-called."""
     msgs = build(cond, pid, r)
-    sha = hashlib.sha256(json.dumps(msgs, sort_keys=True).encode()).hexdigest()
+    sha = hashlib.sha256(json.dumps([msgs, EXTRA], sort_keys=True).encode()).hexdigest()
     p = cell_path(cond, pid, r["id"])
     if p.exists():
         d = json.loads(p.read_text())
@@ -231,9 +241,9 @@ def get_cell(r, cond, pid):
 
 # ---------------------------------------------------------------- subcommands
 def cmd_models(a):
-    tx, _, _ = call("GET", "/models", cond="recon")
+    tx, _, _ = call("GET", "/models" + ("?execution_status=ready" if a.ready else ""), cond="recon")
     d = json.loads(tx)
-    (HERE / "models_list.json").write_text(json.dumps(d, indent=1))
+    (HERE / ("models_ready_now.json" if a.ready else "models_list.json")).write_text(json.dumps(d, indent=1))
     rows = d.get("data", d)
     print(len(rows), "models")
     for m in sorted(rows, key=lambda m: m["id"]):
@@ -241,6 +251,7 @@ def cmd_models(a):
 
 
 def cmd_smoke(a):
+    EXTRA.update(json.loads(a.extra or "{}"))
     index = bm25_index()
     lat = []
     for c in [json.loads(l) for l in open(DATA / "claims_test.jsonl")][:a.n]:  # unlabeled test claims: never in the sample
@@ -303,7 +314,7 @@ def cmd_prepare(a):
 
 def cmd_run(a):
     global MODEL, MAX_CALLS
-    assert a.model != "TBD", "set MODEL / pass --model"
+    assert a.model != "TBD" and ROUTE, "set MODEL and ROUTE in study.py (recorded in protocol.md) before running the study"
     MODEL, MAX_CALLS = a.model, a.max_calls
     s = json.loads(SAMPLE.read_text())
     recs = s[a.split][:a.limit]
@@ -320,7 +331,7 @@ def cmd_run(a):
             log(f"FAIL {t[1]} {t[2]} claim {t[0]['id']}: {type(e).__name__}: {e}")
             return "fail"
 
-    with ThreadPoolExecutor(WORKERS) as ex:
+    with ThreadPoolExecutor(a.workers) as ex:
         for i, f in enumerate(as_completed([ex.submit(work, t) for t in todo]), 1):
             res = f.result()
             stats[res.split(":")[0]] += 1
@@ -332,7 +343,9 @@ def cmd_run(a):
     if a.limit and new_calls:
         cpc, spc = new_calls / len(recs), wall / new_calls
         rest = len(s["dev"]) - len(recs) + len(s["test"])
-        log(f"DRY RUN: {new_calls} HTTP calls for {len(recs)} claims = {cpc:.2f} calls/claim (6.00 = no retries), {spc:.2f} s/call")
+        lat = sorted(x["dt"] for x in [json.loads(l) for l in open(LEDGER)][-new_calls:] if x["status"] == 200)
+        log(f"DRY RUN: {new_calls} HTTP calls for {len(recs)} claims = {cpc:.2f} calls/claim (6.00 = no retries), {spc:.2f} s/call, "
+            f"HTTP latency p50={lat[len(lat) // 2] if lat else float('nan'):.1f}s p90={lat[int(len(lat) * .9)] if lat else float('nan'):.1f}s, workers={a.workers}")
         log(f"PROJECTION rest of plan ({rest} claims): ~{cpc * rest:.0f} calls, ~{cpc * rest * spc / 60:.0f} min; "
             f"total incl. dry run: ~{new_calls + cpc * rest:.0f} calls, ~{(wall + cpc * rest * spc) / 60:.0f} min "
             f"(proceed if < 120 min)")
@@ -373,15 +386,17 @@ def cmd_check(a):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    sub.add_parser("models")
+    sub.add_parser("models").add_argument("--ready", action="store_true", help="only models routable right now (writes models_ready_now.json)")
     sub.add_parser("prepare")
     sm = sub.add_parser("smoke")
     sm.add_argument("--model", required=True)
     sm.add_argument("--n", type=int, default=5)
+    sm.add_argument("--extra", help="JSON of extra request-body fields, e.g. a thinking switch (experiment)")
     r = sub.add_parser("run")
     r.add_argument("--split", choices=["dev", "test"], required=True)
     r.add_argument("--limit", type=int, help="first N claims only (dry run)")
     r.add_argument("--max-calls", type=int, default=1800)
+    r.add_argument("--workers", type=int, default=WORKERS, help="concurrent in-flight requests (the 2.05 s gate still applies)")
     r.add_argument("--model", default=MODEL)
     k = sub.add_parser("check")
     k.add_argument("--split", choices=["dev", "test"], required=True)

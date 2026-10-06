@@ -96,9 +96,9 @@ def main():
                "do not interpret canary rates until this is explained.", ""]
     if partial:
         md += [f"> **PARTIAL RUN** (cells with fewer than {N} claims): {', '.join(partial)}", ""]
-    nonnim = {k: v for k, v in via.items() if not str(k).startswith("nvidia/")}
+    multi = {k: v for k, v in via.items() if k not in ("(none)",)}
     md += ["## Setup", f"- model requested: `{a.model}`; model ids returned by the API: {dict(served)}",
-           f"- upstream route per call (`X-Routed-Via`): {dict(via)}" + (f"  **NON-NVIDIA ROUTES PRESENT: {nonnim}**" if nonnim else ""),
+           f"- upstream route per call (`X-Routed-Via`): {dict(via)}" + (f"  **MORE THAN ONE UPSTREAM ROUTE: the 'one model' assumption is violated**" if len(multi) > 1 else ""),
            f"- claims in split: {N} ({sum(r['gold'] == 'SUPPORTS' for r in recs)} SUPPORTS / {sum(r['gold'] == 'CONTRADICTS' for r in recs)} CONTRADICTS); cells = 3 evidence conditions x 2 prompts",
            f"- first/last response timestamp: {min(ts) if ts else 'n/a'} / {max(ts) if ts else 'n/a'}",
            f"- one model, one run, one dataset (SciFact); temperature 0; 95% percentile bootstrap CIs over claims "
@@ -171,7 +171,12 @@ def main():
     # ---- 7. ledger
     led = [json.loads(l) for l in open(study.LEDGER)] if study.LEDGER.exists() else []
     study_rows = [x for x in led if x.get("cond") in CONDS and x.get("model") == a.model]
-    md += ["## 7. Call accounting", f"- ledger rows (all HTTP requests incl. recon/probes/smoke/retries): {len(led)}",
+    use = [x.get("usage") or {} for r in recs for c in CONDS for p in PIDS if study.cell_path(c, p, r["id"]).exists()
+           for x in json.loads(study.cell_path(c, p, r["id"]).read_text())["attempts"]]
+    pt, ct = sum(u.get("prompt_tokens", 0) for u in use), sum(u.get("completion_tokens", 0) for u in use)
+    md += ["## 7. Call accounting", f"- tokens reported by the API for this split's responses: prompt {pt:,}, completion {ct:,} over {len(use)} responses; "
+           f"estimated Cloudflare neurons (published list rates 26,668 per M input and 204,805 per M output tokens): about {pt * 26.668 / 1000 + ct * 204.805 / 1000:,.0f}",
+           f"- ledger rows (all HTTP requests incl. recon/probes/smoke/retries): {len(led)}",
            f"- study requests for this model (E0/E1/E2 cells, incl. retries): {len(study_rows)}; by status: {dict(Counter(x['status'] for x in study_rows))}", ""]
     (out / "summary.md").write_text("\n".join(md))
 

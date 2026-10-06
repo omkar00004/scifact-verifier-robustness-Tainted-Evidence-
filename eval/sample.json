@@ -1,0 +1,4207 @@
+{
+ "seed": 42,
+ "dev": [
+  {
+   "id": 1319,
+   "claim": "Transplanted human glial cells can differentiate within the host animal.",
+   "gold": "SUPPORTS",
+   "gold_doc": 16284655,
+   "src": "dev",
+   "distractors": [
+    14192687,
+    4388470
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14192687,
+   "order": [
+    4388470,
+    16284655,
+    14192687
+   ]
+  },
+  {
+   "id": 242,
+   "claim": "Cellular clocks are not predictive of mitosis timing in NIH 3T3 cells.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 2212067,
+   "src": "train",
+   "distractors": [
+    11557602,
+    4385779
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4385779,
+   "order": [
+    2212067,
+    11557602,
+    4385779
+   ]
+  },
+  {
+   "id": 382,
+   "claim": "Environmentally-induced senescence is mimicked in disease modeling by adding specific molecules to the culture system.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11659421,
+   "src": "train",
+   "distractors": [
+    41710132,
+    17412260
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 17412260,
+   "order": [
+    17412260,
+    11659421,
+    41710132
+   ]
+  },
+  {
+   "id": 922,
+   "claim": "Patients in stable partnerships have a faster progression from HIV to AIDS.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 17077004,
+   "src": "dev",
+   "distractors": [
+    11230569,
+    23304931
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23304931,
+   "order": [
+    11230569,
+    23304931,
+    17077004
+   ]
+  },
+  {
+   "id": 912,
+   "claim": "PKG-la plays an essential role in expression of spinal long term potentiation in PGK-la knockout mice.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11254556,
+   "src": "train",
+   "distractors": [
+    14188138,
+    11992632
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14188138,
+   "order": [
+    11992632,
+    14188138,
+    11254556
+   ]
+  },
+  {
+   "id": 249,
+   "claim": "Chenodeosycholic acid treatment reduces whole-body energy expenditure.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 1568684,
+   "src": "dev",
+   "distractors": [
+    25050364,
+    23369842
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23369842,
+   "order": [
+    25050364,
+    1568684,
+    23369842
+   ]
+  },
+  {
+   "id": 752,
+   "claim": "Major vault protein regulates sorting of tumor suppressive miR-193a into EVs.",
+   "gold": "SUPPORTS",
+   "gold_doc": 19800147,
+   "src": "train",
+   "distractors": [
+    1905095,
+    5783785
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5783785,
+   "order": [
+    5783785,
+    1905095,
+    19800147
+   ]
+  },
+  {
+   "id": 28,
+   "claim": "A T helper 2 cell (Th2) environment impedes disease development in patients with systemic lupus erythematosus (SLE).",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12670680,
+   "src": "train",
+   "distractors": [
+    14938990,
+    28015516
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14938990,
+   "order": [
+    12670680,
+    14938990,
+    28015516
+   ]
+  },
+  {
+   "id": 1210,
+   "claim": "The density of cytokine receptor bearing cells affects the distance over which cytokines act.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4928282,
+   "src": "train",
+   "distractors": [
+    13636631,
+    36242796
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 13636631,
+   "order": [
+    13636631,
+    4928282,
+    36242796
+   ]
+  },
+  {
+   "id": 1041,
+   "claim": "Replacement of histone H2A with H2A.Z slows gene activation in yeasts by stabilizing +1 nucleosomes.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 25254425,
+   "src": "dev",
+   "distractors": [
+    9451052,
+    5966635
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9451052,
+   "order": [
+    25254425,
+    5966635,
+    9451052
+   ]
+  },
+  {
+   "id": 576,
+   "claim": "In melanoma, anti-CTLA-4 treatment reinvigorates exhausted PD-1+Eomes+CD8 T cells.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4468861,
+   "src": "train",
+   "distractors": [
+    15128866,
+    18488986
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 15128866,
+   "order": [
+    4468861,
+    18488986,
+    15128866
+   ]
+  },
+  {
+   "id": 600,
+   "claim": "Including pharmacists in rounding teams does not alter the incidence of adverse drug events (ADEs).",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12258338,
+   "src": "train",
+   "distractors": [
+    42404093,
+    583260
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 583260,
+   "order": [
+    583260,
+    12258338,
+    42404093
+   ]
+  },
+  {
+   "id": 272,
+   "claim": "Combination nicotine replacement therapies with varenicline or bupropion are more effective after 12 weeks of reatment compared to varenicline monotherapy.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11614737,
+   "src": "train",
+   "distractors": [
+    5114940,
+    24019260
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5114940,
+   "order": [
+    11614737,
+    24019260,
+    5114940
+   ]
+  },
+  {
+   "id": 341,
+   "claim": "Diabetes remission occurs more in people treated with conventional therapy than in people treated with laparoscopic adjustable gastric banding surgery.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 7098463,
+   "src": "train",
+   "distractors": [
+    5824985,
+    32850528
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 32850528,
+   "order": [
+    5824985,
+    7098463,
+    32850528
+   ]
+  },
+  {
+   "id": 248,
+   "claim": "Chenodeosycholic acid treatment increases whole-body energy expenditure.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1568684,
+   "src": "dev",
+   "distractors": [
+    25050364,
+    23369842
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23369842,
+   "order": [
+    25050364,
+    1568684,
+    23369842
+   ]
+  },
+  {
+   "id": 1081,
+   "claim": "Side effects associated with antidepressants do not represent a mortality risk to postmenopausal women.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 5691302,
+   "src": "train",
+   "distractors": [
+    25973484,
+    6309659
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6309659,
+   "order": [
+    6309659,
+    5691302,
+    25973484
+   ]
+  },
+  {
+   "id": 148,
+   "claim": "Autophagy declines in aged organisms.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1084345,
+   "src": "dev",
+   "distractors": [
+    10012166,
+    52887689
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 52887689,
+   "order": [
+    1084345,
+    52887689,
+    10012166
+   ]
+  },
+  {
+   "id": 903,
+   "claim": "PD-1 triggering on monocytes reduces IL-10 production by monocytes.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 10648422,
+   "src": "dev",
+   "distractors": [
+    5752492,
+    1360607
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1360607,
+   "order": [
+    5752492,
+    10648422,
+    1360607
+   ]
+  },
+  {
+   "id": 979,
+   "claim": "Progerin induces premature aging in stem cells.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11659421,
+   "src": "train",
+   "distractors": [
+    16630060,
+    40349336
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 40349336,
+   "order": [
+    40349336,
+    16630060,
+    11659421
+   ]
+  },
+  {
+   "id": 185,
+   "claim": "Breast cancer development is determined exclusively by genetic factors.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 18340282,
+   "src": "dev",
+   "distractors": [
+    21874312,
+    3524352
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 21874312,
+   "order": [
+    18340282,
+    21874312,
+    3524352
+   ]
+  },
+  {
+   "id": 673,
+   "claim": "LDL cholesterol has a causal role in the development of cardiovascular disease.",
+   "gold": "SUPPORTS",
+   "gold_doc": 2095573,
+   "src": "train",
+   "distractors": [
+    30981192,
+    5612738
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5612738,
+   "order": [
+    5612738,
+    2095573,
+    30981192
+   ]
+  },
+  {
+   "id": 1336,
+   "claim": "UCB T cells reduce TCR diversity after transplantation.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 27910499,
+   "src": "dev",
+   "distractors": [
+    27243019,
+    43587663
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 27243019,
+   "order": [
+    27243019,
+    27910499,
+    43587663
+   ]
+  },
+  {
+   "id": 1072,
+   "claim": "Sepsis related mortality has remained stable between 2009-2014.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4824840,
+   "src": "train",
+   "distractors": [
+    3776162,
+    26314743
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3776162,
+   "order": [
+    3776162,
+    26314743,
+    4824840
+   ]
+  },
+  {
+   "id": 816,
+   "claim": "Mutations in RIM1 raise levels of IME1 RNA.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 8148304,
+   "src": "train",
+   "distractors": [
+    23604601,
+    7662206
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23604601,
+   "order": [
+    7662206,
+    23604601,
+    8148304
+   ]
+  },
+  {
+   "id": 837,
+   "claim": "NR5A2 is important in development of endometrial tissues.",
+   "gold": "SUPPORTS",
+   "gold_doc": 15928989,
+   "src": "dev",
+   "distractors": [
+    1780819,
+    25263942
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25263942,
+   "order": [
+    1780819,
+    25263942,
+    15928989
+   ]
+  },
+  {
+   "id": 1106,
+   "claim": "Students who perform poorly in the early years of medical school are less likely to commit professional misconduct later in their careers.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 6710713,
+   "src": "train",
+   "distractors": [
+    17374970,
+    28017005
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 28017005,
+   "order": [
+    6710713,
+    17374970,
+    28017005
+   ]
+  },
+  {
+   "id": 163,
+   "claim": "Bariatric surgery has a positive impact on mental health.",
+   "gold": "SUPPORTS",
+   "gold_doc": 18872233,
+   "src": "dev",
+   "distractors": [
+    43220289,
+    19071857
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 43220289,
+   "order": [
+    43220289,
+    19071857,
+    18872233
+   ]
+  },
+  {
+   "id": 245,
+   "claim": "Charcoal is an effective treatment for acute paraquat poisoning.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 3430789,
+   "src": "train",
+   "distractors": [
+    25104843,
+    12209494
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25104843,
+   "order": [
+    3430789,
+    25104843,
+    12209494
+   ]
+  },
+  {
+   "id": 483,
+   "claim": "H.pylori-mediated gastric cancer occurs due to the accumulation of mutations in host epithelial cells.",
+   "gold": "SUPPORTS",
+   "gold_doc": 22703082,
+   "src": "train",
+   "distractors": [
+    24705390,
+    39550665
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24705390,
+   "order": [
+    39550665,
+    24705390,
+    22703082
+   ]
+  },
+  {
+   "id": 430,
+   "claim": "FoxO3a activation in neuronal death is inhibited by reactive oxygen species (ROS).",
+   "gold": "CONTRADICTS",
+   "gold_doc": 28937856,
+   "src": "train",
+   "distractors": [
+    36838958,
+    2543135
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 36838958,
+   "order": [
+    36838958,
+    28937856,
+    2543135
+   ]
+  },
+  {
+   "id": 791,
+   "claim": "Migraine with aura is associated with ischemic stroke.",
+   "gold": "SUPPORTS",
+   "gold_doc": 15984735,
+   "src": "train",
+   "distractors": [
+    14566771,
+    23785605
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14566771,
+   "order": [
+    15984735,
+    23785605,
+    14566771
+   ]
+  },
+  {
+   "id": 233,
+   "claim": "Cell autonomous sex determination in somatic cells does not occur in Galliformes.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4388470,
+   "src": "dev",
+   "distractors": [
+    36708463,
+    4423327
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 36708463,
+   "order": [
+    4423327,
+    4388470,
+    36708463
+   ]
+  },
+  {
+   "id": 196,
+   "claim": "C2 works synergistically with A-769662 to activate dephosphorylated AMPK.",
+   "gold": "SUPPORTS",
+   "gold_doc": 19313533,
+   "src": "train",
+   "distractors": [
+    49556906,
+    23974474
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 49556906,
+   "order": [
+    23974474,
+    19313533,
+    49556906
+   ]
+  },
+  {
+   "id": 1288,
+   "claim": "There is a positive correlation between hip fractures and statin use.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4687948,
+   "src": "train",
+   "distractors": [
+    16812091,
+    2391552
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16812091,
+   "order": [
+    4687948,
+    16812091,
+    2391552
+   ]
+  },
+  {
+   "id": 1311,
+   "claim": "Trans-acting factors, such as lncRNAs, influence mRNA translation.",
+   "gold": "SUPPORTS",
+   "gold_doc": 13763195,
+   "src": "train",
+   "distractors": [
+    26378103,
+    9655347
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9655347,
+   "order": [
+    9655347,
+    26378103,
+    13763195
+   ]
+  },
+  {
+   "id": 1141,
+   "claim": "Taking 400mg of \u03b1-tocopheryl acetate in combination with vitamin C reduces the risk of prostate cancer.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12009265,
+   "src": "train",
+   "distractors": [
+    308862,
+    3898784
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3898784,
+   "order": [
+    3898784,
+    12009265,
+    308862
+   ]
+  },
+  {
+   "id": 631,
+   "claim": "Inhibiting HDAC6 increases survival of mice with ARID1A mutated tumors.",
+   "gold": "SUPPORTS",
+   "gold_doc": 5468807,
+   "src": "train",
+   "distractors": [
+    4325398,
+    9211173
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9211173,
+   "order": [
+    5468807,
+    4325398,
+    9211173
+   ]
+  },
+  {
+   "id": 287,
+   "claim": "Converting apoE4 to apoE3 by gene editing worsens the pathology associated with apoE4 in human iPSCderived neurons.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4709641,
+   "src": "train",
+   "distractors": [
+    15347087,
+    7029990
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 7029990,
+   "order": [
+    7029990,
+    15347087,
+    4709641
+   ]
+  },
+  {
+   "id": 441,
+   "claim": "G-CSF increases the expansion and infiltration of MDSCs into tumors.",
+   "gold": "SUPPORTS",
+   "gold_doc": 2014909,
+   "src": "train",
+   "distractors": [
+    25726838,
+    24612804
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25726838,
+   "order": [
+    2014909,
+    24612804,
+    25726838
+   ]
+  },
+  {
+   "id": 54,
+   "claim": "AMP-activated protein kinase (AMPK) activation increases inflammation-related fibrosis in the lungs.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 49556906,
+   "src": "dev",
+   "distractors": [
+    3973445,
+    32408470
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 32408470,
+   "order": [
+    32408470,
+    49556906,
+    3973445
+   ]
+  }
+ ],
+ "test": [
+  {
+   "id": 911,
+   "claim": "PKG-la plays an essential role in expression of pain hypersensitivity in PGK-la knockout mice.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11254556,
+   "src": "dev",
+   "distractors": [
+    14188138,
+    10666475
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 10666475,
+   "order": [
+    11254556,
+    14188138,
+    10666475
+   ]
+  },
+  {
+   "id": 1073,
+   "claim": "Sepsis related mortality has risen from 2009 to 2014.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4824840,
+   "src": "train",
+   "distractors": [
+    5596332,
+    3776162
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5596332,
+   "order": [
+    4824840,
+    3776162,
+    5596332
+   ]
+  },
+  {
+   "id": 372,
+   "claim": "Eilat virus (EILV) produced in mosquitos elicits rapid and long-lasting neutralizing antibodies in nonhuman primates.",
+   "gold": "SUPPORTS",
+   "gold_doc": 24922825,
+   "src": "train",
+   "distractors": [
+    23915841,
+    4373433
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4373433,
+   "order": [
+    24922825,
+    23915841,
+    4373433
+   ]
+  },
+  {
+   "id": 927,
+   "claim": "Patients with common epithelial cancers are less likely to have an emergency event as their first hospital admission if they live in resource-deprived areas.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16390264,
+   "src": "train",
+   "distractors": [
+    5641851,
+    14021596
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5641851,
+   "order": [
+    14021596,
+    16390264,
+    5641851
+   ]
+  },
+  {
+   "id": 243,
+   "claim": "Cellular differentiation of embryonic stem cells is accompanied by changes in replication timing, transcription and nuclear localization.",
+   "gold": "SUPPORTS",
+   "gold_doc": 8148122,
+   "src": "train",
+   "distractors": [
+    1744097,
+    27279525
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 27279525,
+   "order": [
+    8148122,
+    1744097,
+    27279525
+   ]
+  },
+  {
+   "id": 963,
+   "claim": "Pre-mRNAs associated with spliceosomal components are less stable than unassociated splicing substrates.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4162857,
+   "src": "train",
+   "distractors": [
+    16929739,
+    4067274
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16929739,
+   "order": [
+    4162857,
+    4067274,
+    16929739
+   ]
+  },
+  {
+   "id": 130,
+   "claim": "Articles published in open access format are more likely to be cited than traditional journals.",
+   "gold": "SUPPORTS",
+   "gold_doc": 27768226,
+   "src": "dev",
+   "distractors": [
+    10577574,
+    2107238
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 2107238,
+   "order": [
+    27768226,
+    10577574,
+    2107238
+   ]
+  },
+  {
+   "id": 1050,
+   "claim": "Risedronate increases risk of vertebral and non-vertebral fractures.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 19878070,
+   "src": "train",
+   "distractors": [
+    26000593,
+    11246427
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 11246427,
+   "order": [
+    19878070,
+    11246427,
+    26000593
+   ]
+  },
+  {
+   "id": 399,
+   "claim": "Exposure to fine particulate air pollution is relate to anxiety prevalence.",
+   "gold": "SUPPORTS",
+   "gold_doc": 791050,
+   "src": "dev",
+   "distractors": [
+    471921,
+    42387637
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 471921,
+   "order": [
+    791050,
+    471921,
+    42387637
+   ]
+  },
+  {
+   "id": 219,
+   "claim": "CX3CR1 on the Th2 cells suppresses airway inflammation.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 21366394,
+   "src": "dev",
+   "distractors": [
+    20311968,
+    40365566
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 40365566,
+   "order": [
+    40365566,
+    20311968,
+    21366394
+   ]
+  },
+  {
+   "id": 488,
+   "claim": "HAND2 methylation is a key step in early endometrial carcinogenesis.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1780819,
+   "src": "train",
+   "distractors": [
+    11359243,
+    6121668
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 11359243,
+   "order": [
+    11359243,
+    6121668,
+    1780819
+   ]
+  },
+  {
+   "id": 563,
+   "claim": "In British Men, haplogroup I decreases risk of cardiovascular disease.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 2867345,
+   "src": "train",
+   "distractors": [
+    5698494,
+    25355575
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5698494,
+   "order": [
+    5698494,
+    25355575,
+    2867345
+   ]
+  },
+  {
+   "id": 1209,
+   "claim": "The deamination of cytidine to uridine on the minus strand of viral DNA can inactivate the viral genome by inducing G-to-A mutations.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4347374,
+   "src": "train",
+   "distractors": [
+    544971,
+    2638387
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 544971,
+   "order": [
+    544971,
+    2638387,
+    4347374
+   ]
+  },
+  {
+   "id": 619,
+   "claim": "Increased vessel density along with a reduction in fibrosis decreases the efficacy of chemotherapy treatments.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 20888849,
+   "src": "dev",
+   "distractors": [
+    6673421,
+    21258863
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6673421,
+   "order": [
+    6673421,
+    21258863,
+    20888849
+   ]
+  },
+  {
+   "id": 309,
+   "claim": "DUSP4 increases apoptosis.",
+   "gold": "SUPPORTS",
+   "gold_doc": 7821634,
+   "src": "train",
+   "distractors": [
+    24190159,
+    23403754
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24190159,
+   "order": [
+    7821634,
+    23403754,
+    24190159
+   ]
+  },
+  {
+   "id": 793,
+   "claim": "Mitochondria are uninvolved in apoptosis.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 8551160,
+   "src": "dev",
+   "distractors": [
+    23403754,
+    23509113
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23509113,
+   "order": [
+    23509113,
+    23403754,
+    8551160
+   ]
+  },
+  {
+   "id": 548,
+   "claim": "IL-6 signaling plays a major role in atherosclerotic cardiovascular disease.",
+   "gold": "SUPPORTS",
+   "gold_doc": 18199839,
+   "src": "train",
+   "distractors": [
+    17421851,
+    9334631
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 17421851,
+   "order": [
+    17421851,
+    9334631,
+    18199839
+   ]
+  },
+  {
+   "id": 513,
+   "claim": "High cardiopulmonary fitness causes increased mortality rate.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 13230773,
+   "src": "dev",
+   "distractors": [
+    12770738,
+    36288526
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 36288526,
+   "order": [
+    36288526,
+    12770738,
+    13230773
+   ]
+  },
+  {
+   "id": 1371,
+   "claim": "Vitamin D is an important factor in the relationship between calcium and parathyroid hormone.",
+   "gold": "SUPPORTS",
+   "gold_doc": 16256507,
+   "src": "train",
+   "distractors": [
+    23267371,
+    13312471
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23267371,
+   "order": [
+    13312471,
+    16256507,
+    23267371
+   ]
+  },
+  {
+   "id": 1376,
+   "claim": "Whole brain radiotherapy increases the occurrence of new brain metastases.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 3944632,
+   "src": "train",
+   "distractors": [
+    19408393,
+    23639838
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 19408393,
+   "order": [
+    23639838,
+    19408393,
+    3944632
+   ]
+  },
+  {
+   "id": 495,
+   "claim": "Having a main partner improves HIV outcomes.",
+   "gold": "SUPPORTS",
+   "gold_doc": 17077004,
+   "src": "train",
+   "distractors": [
+    21216726,
+    5835149
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5835149,
+   "order": [
+    17077004,
+    21216726,
+    5835149
+   ]
+  },
+  {
+   "id": 993,
+   "claim": "Pyridostatin destabilizes the G - quadruplex in the telomeric region.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16472469,
+   "src": "dev",
+   "distractors": [
+    25842866,
+    26118532
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25842866,
+   "order": [
+    16472469,
+    25842866,
+    26118532
+   ]
+  },
+  {
+   "id": 279,
+   "claim": "Commelina yellow mottle virus' (ComYMV) genome consists of 7489 baise pairs.",
+   "gold": "SUPPORTS",
+   "gold_doc": 14376683,
+   "src": "dev",
+   "distractors": [
+    83667891,
+    37677954
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 37677954,
+   "order": [
+    37677954,
+    14376683,
+    83667891
+   ]
+  },
+  {
+   "id": 879,
+   "claim": "Occupancy of ribosomes by IncRNAs do not make functional peptides.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 8426046,
+   "src": "dev",
+   "distractors": [
+    24335068,
+    29459383
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24335068,
+   "order": [
+    8426046,
+    24335068,
+    29459383
+   ]
+  },
+  {
+   "id": 343,
+   "claim": "Diabetic patients with acute coronary syndrome experience increased short-term and long-term risk for bleeding events.",
+   "gold": "SUPPORTS",
+   "gold_doc": 5884524,
+   "src": "dev",
+   "distractors": [
+    19308127,
+    23783727
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23783727,
+   "order": [
+    19308127,
+    5884524,
+    23783727
+   ]
+  },
+  {
+   "id": 645,
+   "claim": "Intake of folic acid (FA) and vitamin B6 (VB6) increases levels of homocysteine.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12810152,
+   "src": "train",
+   "distractors": [
+    21636085,
+    33409100
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 21636085,
+   "order": [
+    33409100,
+    12810152,
+    21636085
+   ]
+  },
+  {
+   "id": 482,
+   "claim": "Guanine nucleotide exchange factors (GEFs) mediate RhoA activation in response to tensional forces on fibronectin-binding integrins.",
+   "gold": "SUPPORTS",
+   "gold_doc": 10991183,
+   "src": "train",
+   "distractors": [
+    24881307,
+    8093935
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24881307,
+   "order": [
+    8093935,
+    24881307,
+    10991183
+   ]
+  },
+  {
+   "id": 910,
+   "claim": "PKG-la does not have a large impact on expression of spinal long term potentiation in PGK-la knockout mice.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 11254556,
+   "src": "train",
+   "distractors": [
+    14188138,
+    11992632
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14188138,
+   "order": [
+    11254556,
+    11992632,
+    14188138
+   ]
+  },
+  {
+   "id": 893,
+   "claim": "Osteocytes have an essential role in G-CSF induced HSPC mobilization.",
+   "gold": "SUPPORTS",
+   "gold_doc": 13509809,
+   "src": "train",
+   "distractors": [
+    38899659,
+    24612804
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24612804,
+   "order": [
+    38899659,
+    13509809,
+    24612804
+   ]
+  },
+  {
+   "id": 882,
+   "claim": "Omnivores produce less trimethylamine N-oxide from dietary I-carnitine than vegetarians.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 14803797,
+   "src": "dev",
+   "distractors": [
+    12709184,
+    33684572
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 33684572,
+   "order": [
+    12709184,
+    33684572,
+    14803797
+   ]
+  },
+  {
+   "id": 858,
+   "claim": "Normal expression of RUNX1 causes tumorsupressing effects.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1982286,
+   "src": "train",
+   "distractors": [
+    12315072,
+    22049489
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 22049489,
+   "order": [
+    1982286,
+    22049489,
+    12315072
+   ]
+  },
+  {
+   "id": 1065,
+   "claim": "Satellite cell dysfunction is a key factor in sarcopenia development.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 20418809,
+   "src": "train",
+   "distractors": [
+    16660256,
+    4326318
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16660256,
+   "order": [
+    20418809,
+    4326318,
+    16660256
+   ]
+  },
+  {
+   "id": 246,
+   "claim": "Charcoal shows no benefit for acute paraquat poisoning.",
+   "gold": "SUPPORTS",
+   "gold_doc": 3430789,
+   "src": "train",
+   "distractors": [
+    25104843,
+    12209494
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25104843,
+   "order": [
+    3430789,
+    25104843,
+    12209494
+   ]
+  },
+  {
+   "id": 747,
+   "claim": "MafA ubiquitination decreases the recruitment of coavtivator P/CAF by MafA.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 11291348,
+   "src": "train",
+   "distractors": [
+    3559136,
+    3727986
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3559136,
+   "order": [
+    3559136,
+    3727986,
+    11291348
+   ]
+  },
+  {
+   "id": 1383,
+   "claim": "aPKCz causes tumour suppression by affecting glutamine metabolism.",
+   "gold": "SUPPORTS",
+   "gold_doc": 17755060,
+   "src": "train",
+   "distractors": [
+    3831884,
+    9483851
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3831884,
+   "order": [
+    3831884,
+    9483851,
+    17755060
+   ]
+  },
+  {
+   "id": 840,
+   "claim": "Natriuretic peptides increase susceptibility to diabetes.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 15663829,
+   "src": "train",
+   "distractors": [
+    5567005,
+    34054472
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 34054472,
+   "order": [
+    15663829,
+    5567005,
+    34054472
+   ]
+  },
+  {
+   "id": 356,
+   "claim": "Dscam1 acts as a hypervariable pattern-recognition receptor for the immune system.",
+   "gold": "SUPPORTS",
+   "gold_doc": 6144337,
+   "src": "train",
+   "distractors": [
+    21439293,
+    17023584
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 21439293,
+   "order": [
+    17023584,
+    6144337,
+    21439293
+   ]
+  },
+  {
+   "id": 825,
+   "claim": "N348I mutations reduce resistance to nevirapine.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 15319019,
+   "src": "train",
+   "distractors": [
+    2319305,
+    6426919
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 2319305,
+   "order": [
+    15319019,
+    2319305,
+    6426919
+   ]
+  },
+  {
+   "id": 1036,
+   "claim": "Removal of H3K9me3 improves reprogramming efficiency in human somatic cell nuclear transfer experiments.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4547102,
+   "src": "train",
+   "distractors": [
+    15803282,
+    8185080
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 15803282,
+   "order": [
+    15803282,
+    8185080,
+    4547102
+   ]
+  },
+  {
+   "id": 48,
+   "claim": "A total of 1,000 people in the UK are asymptomatic carriers of vCJD infection.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 13734012,
+   "src": "dev",
+   "distractors": [
+    18617259,
+    13959707
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 13959707,
+   "order": [
+    13959707,
+    18617259,
+    13734012
+   ]
+  },
+  {
+   "id": 76,
+   "claim": "Active Ly49Q induces neutrophil polarization.",
+   "gold": "SUPPORTS",
+   "gold_doc": 5531479,
+   "src": "train",
+   "distractors": [
+    52925737,
+    46517055
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 52925737,
+   "order": [
+    5531479,
+    52925737,
+    46517055
+   ]
+  },
+  {
+   "id": 579,
+   "claim": "In patients with congenital heart defects, \u03b2-blockers significantly improve clinical heart failure outcomes.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 34139429,
+   "src": "train",
+   "distractors": [
+    37029185,
+    9622258
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9622258,
+   "order": [
+    37029185,
+    9622258,
+    34139429
+   ]
+  },
+  {
+   "id": 977,
+   "claim": "Pro-inflammatory cytokines are up regulated during tumor development.",
+   "gold": "SUPPORTS",
+   "gold_doc": 39264456,
+   "src": "train",
+   "distractors": [
+    120626,
+    3475317
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3475317,
+   "order": [
+    39264456,
+    120626,
+    3475317
+   ]
+  },
+  {
+   "id": 578,
+   "claim": "In mouse models, the loss of CSF1R facilitates MOZ-TIF2-induced leuekmogenesis.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 8764879,
+   "src": "dev",
+   "distractors": [
+    3559136,
+    14174055
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14174055,
+   "order": [
+    14174055,
+    8764879,
+    3559136
+   ]
+  },
+  {
+   "id": 1019,
+   "claim": "Rapid phosphotransfer rates govern fidelity in two component systems",
+   "gold": "SUPPORTS",
+   "gold_doc": 11603066,
+   "src": "dev",
+   "distractors": [
+    1225513,
+    44172171
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1225513,
+   "order": [
+    11603066,
+    1225513,
+    44172171
+   ]
+  },
+  {
+   "id": 1246,
+   "claim": "The one-child policy has created a hospitable environment for female infants.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 7662395,
+   "src": "train",
+   "distractors": [
+    70455704,
+    1263446
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 70455704,
+   "order": [
+    70455704,
+    1263446,
+    7662395
+   ]
+  },
+  {
+   "id": 266,
+   "claim": "Cnn1 recruitment varies with cell cycle timing.",
+   "gold": "SUPPORTS",
+   "gold_doc": 22405338,
+   "src": "train",
+   "distractors": [
+    7878807,
+    14471161
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14471161,
+   "order": [
+    7878807,
+    14471161,
+    22405338
+   ]
+  },
+  {
+   "id": 856,
+   "claim": "Nonsteroidal antinflammatory drugs are ineffective as cancer treatments.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 43334921,
+   "src": "train",
+   "distractors": [
+    6407356,
+    878526
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6407356,
+   "order": [
+    878526,
+    43334921,
+    6407356
+   ]
+  },
+  {
+   "id": 52,
+   "claim": "ALDH1 expression is associated with poorer prognosis for breast cancer primary tumors.",
+   "gold": "SUPPORTS",
+   "gold_doc": 45638119,
+   "src": "train",
+   "distractors": [
+    15113221,
+    10024681
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 10024681,
+   "order": [
+    45638119,
+    10024681,
+    15113221
+   ]
+  },
+  {
+   "id": 466,
+   "claim": "Genomic sequences involved in alternative splicing responsible for Hutchinson-Gilford progeria syndrome (HGPS) are abundant in the ''progerinonly'' allele of Lmna knock-in models.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 22544171,
+   "src": "train",
+   "distractors": [
+    15692098,
+    34747208
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 15692098,
+   "order": [
+    22544171,
+    15692098,
+    34747208
+   ]
+  },
+  {
+   "id": 210,
+   "claim": "COPI coatmer is involved in lipid homeostasis.",
+   "gold": "SUPPORTS",
+   "gold_doc": 13794374,
+   "src": "train",
+   "distractors": [
+    35760786,
+    14116046
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 35760786,
+   "order": [
+    35760786,
+    14116046,
+    13794374
+   ]
+  },
+  {
+   "id": 250,
+   "claim": "Chenodeoxycholic acid treatment decreases brown adipose tissue activity.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 1568684,
+   "src": "train",
+   "distractors": [
+    14865329,
+    4319174
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4319174,
+   "order": [
+    14865329,
+    1568684,
+    4319174
+   ]
+  },
+  {
+   "id": 570,
+   "claim": "In breast cancer, the loss of myoepithelial cells promotes the transition of ductal carcinoma in situ to invasive carcinoma.",
+   "gold": "SUPPORTS",
+   "gold_doc": 20333864,
+   "src": "train",
+   "distractors": [
+    22975806,
+    24249915
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24249915,
+   "order": [
+    22975806,
+    24249915,
+    20333864
+   ]
+  },
+  {
+   "id": 142,
+   "claim": "Autologous transplantation of mesenchymal stem cells causes a higher rate of opportunistic infections than induction therapy with anti-interleukin-2 receptor antibodies.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 10582939,
+   "src": "dev",
+   "distractors": [
+    40164383,
+    3935126
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 40164383,
+   "order": [
+    40164383,
+    3935126,
+    10582939
+   ]
+  },
+  {
+   "id": 428,
+   "claim": "Forkhead 0 (fox0) transcription factors are involved in cellular differentiation.",
+   "gold": "SUPPORTS",
+   "gold_doc": 16728949,
+   "src": "train",
+   "distractors": [
+    13798951,
+    28937856
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 13798951,
+   "order": [
+    13798951,
+    16728949,
+    28937856
+   ]
+  },
+  {
+   "id": 612,
+   "claim": "Increased microtubule acetylation exacerbates LRRK2 Roc-COR domain mutation induced locomotor deficits.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 9638032,
+   "src": "train",
+   "distractors": [
+    21598000,
+    16056410
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16056410,
+   "order": [
+    21598000,
+    9638032,
+    16056410
+   ]
+  },
+  {
+   "id": 347,
+   "claim": "Differentiation of progenitor cells to myeloid cells is skewed when insulin signaling is suppressed.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11902109,
+   "src": "train",
+   "distractors": [
+    37699461,
+    21804115
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 37699461,
+   "order": [
+    37699461,
+    21804115,
+    11902109
+   ]
+  },
+  {
+   "id": 881,
+   "claim": "Omnivores produce less trimethylamine N-oxide from dietary I-carnitine than vegans.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 14803797,
+   "src": "train",
+   "distractors": [
+    6327940,
+    33684572
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6327940,
+   "order": [
+    33684572,
+    6327940,
+    14803797
+   ]
+  },
+  {
+   "id": 1352,
+   "claim": "Upregulation of mosGCTL-1 is induced upon infection with West Nile virus.",
+   "gold": "SUPPORTS",
+   "gold_doc": 12885341,
+   "src": "dev",
+   "distractors": [
+    38376189,
+    10559501
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 10559501,
+   "order": [
+    10559501,
+    12885341,
+    38376189
+   ]
+  },
+  {
+   "id": 523,
+   "claim": "Higher plasma levels of I-carnitine, when associated with trimethylamine N-oxide, are negatively correlated with cardiovascular events in humans.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 14803797,
+   "src": "train",
+   "distractors": [
+    33684572,
+    6793674
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6793674,
+   "order": [
+    6793674,
+    14803797,
+    33684572
+   ]
+  },
+  {
+   "id": 646,
+   "claim": "Intake of folic acid (FA) and vitamin B6 (VB6) reduces levels of homocysteine.",
+   "gold": "SUPPORTS",
+   "gold_doc": 12810152,
+   "src": "train",
+   "distractors": [
+    21636085,
+    33409100
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 21636085,
+   "order": [
+    33409100,
+    12810152,
+    21636085
+   ]
+  },
+  {
+   "id": 115,
+   "claim": "Anthrax spores can be disposed of easily after they are dispersed.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 33872649,
+   "src": "dev",
+   "distractors": [
+    1631583,
+    2140513
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 2140513,
+   "order": [
+    1631583,
+    33872649,
+    2140513
+   ]
+  },
+  {
+   "id": 760,
+   "claim": "Mathematical models predict that using Artemisinin-based combination therapy over nongametocytocidal drugs have only a modest impact in reducing malaria transmission.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1805641,
+   "src": "train",
+   "distractors": [
+    3929361,
+    13948920
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3929361,
+   "order": [
+    1805641,
+    3929361,
+    13948920
+   ]
+  },
+  {
+   "id": 1173,
+   "claim": "The PDPN gene deactivates the C-type lectin receptor (CLEC-2).",
+   "gold": "CONTRADICTS",
+   "gold_doc": 7370282,
+   "src": "train",
+   "distractors": [
+    8563659,
+    12885341
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 8563659,
+   "order": [
+    8563659,
+    12885341,
+    7370282
+   ]
+  },
+  {
+   "id": 957,
+   "claim": "Podocytes are motile and migrate in the presence of injury.",
+   "gold": "SUPPORTS",
+   "gold_doc": 123859,
+   "src": "dev",
+   "distractors": [
+    13492264,
+    16355392
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16355392,
+   "order": [
+    16355392,
+    123859,
+    13492264
+   ]
+  },
+  {
+   "id": 767,
+   "claim": "Men are more susceptible to death due to pneumonia when compared to women.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 2488880,
+   "src": "train",
+   "distractors": [
+    33835579,
+    29253460
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 29253460,
+   "order": [
+    29253460,
+    2488880,
+    33835579
+   ]
+  },
+  {
+   "id": 805,
+   "claim": "Monoclonal antibody targeting of N-cadherin inhibits metastasis.",
+   "gold": "SUPPORTS",
+   "gold_doc": 22180793,
+   "src": "dev",
+   "distractors": [
+    3727986,
+    7986878
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 7986878,
+   "order": [
+    3727986,
+    7986878,
+    22180793
+   ]
+  },
+  {
+   "id": 1303,
+   "claim": "Tirasemtiv has no effect on fast-twitch muscle.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12631697,
+   "src": "dev",
+   "distractors": [
+    40631095,
+    43048059
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 43048059,
+   "order": [
+    12631697,
+    43048059,
+    40631095
+   ]
+  },
+  {
+   "id": 1128,
+   "claim": "T cell receptor /CD3 microdomains are required to induce the immunologic synapse.",
+   "gold": "SUPPORTS",
+   "gold_doc": 33499189,
+   "src": "train",
+   "distractors": [
+    2714623,
+    24069089
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 2714623,
+   "order": [
+    33499189,
+    24069089,
+    2714623
+   ]
+  },
+  {
+   "id": 537,
+   "claim": "Hypocretin neurones suppress panicprone state in rats.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16056514,
+   "src": "train",
+   "distractors": [
+    9288638,
+    24186125
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9288638,
+   "order": [
+    24186125,
+    9288638,
+    16056514
+   ]
+  },
+  {
+   "id": 463,
+   "claim": "Genomic aberrations of metastases provide information for targeted therapy.",
+   "gold": "SUPPORTS",
+   "gold_doc": 19736671,
+   "src": "train",
+   "distractors": [
+    21692235,
+    1389264
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1389264,
+   "order": [
+    1389264,
+    19736671,
+    21692235
+   ]
+  },
+  {
+   "id": 1270,
+   "claim": "The risk of male prisoners harming themselves is ten times that of female prisoners.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 13900610,
+   "src": "dev",
+   "distractors": [
+    14843502,
+    20491205
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14843502,
+   "order": [
+    13900610,
+    20491205,
+    14843502
+   ]
+  },
+  {
+   "id": 218,
+   "claim": "CX3CR1 on the Th2 cells promotes airway inflammation.",
+   "gold": "SUPPORTS",
+   "gold_doc": 21366394,
+   "src": "dev",
+   "distractors": [
+    20311968,
+    40365566
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 20311968,
+   "order": [
+    40365566,
+    20311968,
+    21366394
+   ]
+  },
+  {
+   "id": 57,
+   "claim": "APOE4 expression in iPSC-derived neurons increases AlphaBeta production and tau phosphorylation, delaying GABA neuron degeneration.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4709641,
+   "src": "dev",
+   "distractors": [
+    22185730,
+    11659421
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 22185730,
+   "order": [
+    11659421,
+    22185730,
+    4709641
+   ]
+  },
+  {
+   "id": 562,
+   "claim": "Improvements in OER catalysts show stable activity over several hundred hours.",
+   "gold": "SUPPORTS",
+   "gold_doc": 20101846,
+   "src": "train",
+   "distractors": [
+    56391045,
+    21257564
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 56391045,
+   "order": [
+    21257564,
+    20101846,
+    56391045
+   ]
+  },
+  {
+   "id": 909,
+   "claim": "PKG-la does not have a large impact on expression of pain hypersensitivity in PGK-la knockout mice.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 11254556,
+   "src": "train",
+   "distractors": [
+    10666475,
+    16270577
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16270577,
+   "order": [
+    16270577,
+    10666475,
+    11254556
+   ]
+  },
+  {
+   "id": 997,
+   "claim": "Pyridostatin induces double-strand breaks accumulation.",
+   "gold": "SUPPORTS",
+   "gold_doc": 16472469,
+   "src": "train",
+   "distractors": [
+    13023410,
+    27635177
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 27635177,
+   "order": [
+    16472469,
+    13023410,
+    27635177
+   ]
+  },
+  {
+   "id": 847,
+   "claim": "New drugs for tuberculosis often do not penetrate the necrotic portion of a tuberculosis lesion in high concentrations.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16787954,
+   "src": "dev",
+   "distractors": [
+    4424888,
+    341324
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4424888,
+   "order": [
+    4424888,
+    341324,
+    16787954
+   ]
+  },
+  {
+   "id": 1393,
+   "claim": "miRNAs enforce homeostasis by suppressing low-level ''leaky'' transcription.",
+   "gold": "SUPPORTS",
+   "gold_doc": 12440953,
+   "src": "train",
+   "distractors": [
+    12582729,
+    4418070
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4418070,
+   "order": [
+    12582729,
+    12440953,
+    4418070
+   ]
+  },
+  {
+   "id": 669,
+   "claim": "Klf4 is not required for proper myeloid cell differentiation.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 25148216,
+   "src": "train",
+   "distractors": [
+    1744097,
+    22150633
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1744097,
+   "order": [
+    22150633,
+    25148216,
+    1744097
+   ]
+  },
+  {
+   "id": 144,
+   "claim": "Autologous transplantation of mesenchymal stem cells has better graft function than induction therapy with anti-interleukin-2 receptor antibodies.",
+   "gold": "SUPPORTS",
+   "gold_doc": 10582939,
+   "src": "train",
+   "distractors": [
+    27243019,
+    40164383
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 40164383,
+   "order": [
+    40164383,
+    10582939,
+    27243019
+   ]
+  },
+  {
+   "id": 330,
+   "claim": "Deltex has no known interactions with eIF3f.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 9505448,
+   "src": "train",
+   "distractors": [
+    3222187,
+    40145839
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3222187,
+   "order": [
+    3222187,
+    40145839,
+    9505448
+   ]
+  },
+  {
+   "id": 839,
+   "claim": "Nanoparticles can be targeted against specific cell types by incorporating aptamers into lipid nanoparticles.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1469751,
+   "src": "dev",
+   "distractors": [
+    17327939,
+    169264
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 169264,
+   "order": [
+    1469751,
+    169264,
+    17327939
+   ]
+  },
+  {
+   "id": 994,
+   "claim": "Pyridostatin encourages proliferation of homologous recombination - defective cells.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16472469,
+   "src": "train",
+   "distractors": [
+    6710699,
+    25838286
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25838286,
+   "order": [
+    25838286,
+    16472469,
+    6710699
+   ]
+  },
+  {
+   "id": 506,
+   "claim": "Helminths interfere with immune system control of coinfections by microbial pathogens 16.",
+   "gold": "SUPPORTS",
+   "gold_doc": 7433668,
+   "src": "train",
+   "distractors": [
+    21439293,
+    17023584
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 17023584,
+   "order": [
+    17023584,
+    21439293,
+    7433668
+   ]
+  },
+  {
+   "id": 1101,
+   "claim": "Stiff substrates encourage mesodermal differentiation by degrading beta-catenin in an integrin-dependent manner.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 3874000,
+   "src": "train",
+   "distractors": [
+    13779605,
+    21564598
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 13779605,
+   "order": [
+    21564598,
+    3874000,
+    13779605
+   ]
+  },
+  {
+   "id": 386,
+   "claim": "Errors in peripheral IV drug administration are most common during bolus administration and multiple-step medicine preparations.",
+   "gold": "SUPPORTS",
+   "gold_doc": 16495649,
+   "src": "dev",
+   "distractors": [
+    42404093,
+    21260231
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 21260231,
+   "order": [
+    21260231,
+    16495649,
+    42404093
+   ]
+  },
+  {
+   "id": 500,
+   "claim": "Headaches are correlated with cognitive impairment.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 17930286,
+   "src": "train",
+   "distractors": [
+    21274919,
+    6191684
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6191684,
+   "order": [
+    17930286,
+    21274919,
+    6191684
+   ]
+  },
+  {
+   "id": 884,
+   "claim": "Omnivores produce more trimethylamine N-oxide from dietary I-carnitine than vegetarians.",
+   "gold": "SUPPORTS",
+   "gold_doc": 14803797,
+   "src": "train",
+   "distractors": [
+    12709184,
+    33684572
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 12709184,
+   "order": [
+    12709184,
+    33684572,
+    14803797
+   ]
+  },
+  {
+   "id": 683,
+   "claim": "Lack of FGF21 in mice slows the rate of atherosclerotic plaque formation.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 9315213,
+   "src": "train",
+   "distractors": [
+    970012,
+    4890578
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 970012,
+   "order": [
+    4890578,
+    9315213,
+    970012
+   ]
+  },
+  {
+   "id": 114,
+   "claim": "Anthrax spores are very difficult to dispose once they are dispersed.",
+   "gold": "SUPPORTS",
+   "gold_doc": 33872649,
+   "src": "train",
+   "distractors": [
+    15670968,
+    154243324
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 15670968,
+   "order": [
+    33872649,
+    15670968,
+    154243324
+   ]
+  },
+  {
+   "id": 1347,
+   "claim": "Upon viral challenge, influenza-specific memory CD4+ T cells greatly diminish the early production of inflammatory chemokines in the lung.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 19005293,
+   "src": "train",
+   "distractors": [
+    3835423,
+    40473317
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 3835423,
+   "order": [
+    3835423,
+    40473317,
+    19005293
+   ]
+  },
+  {
+   "id": 113,
+   "claim": "Angiotensin converting enzyme inhibitors are associated with increased risk for functional renal insufficiency.",
+   "gold": "SUPPORTS",
+   "gold_doc": 6157837,
+   "src": "dev",
+   "distractors": [
+    1759213,
+    14584755
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14584755,
+   "order": [
+    14584755,
+    6157837,
+    1759213
+   ]
+  },
+  {
+   "id": 590,
+   "claim": "In young and middle-aged adults, current or remote uses of ADHD medications increase the risk of serious cardiovascular events.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 10984005,
+   "src": "train",
+   "distractors": [
+    25451374,
+    1068106
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25451374,
+   "order": [
+    10984005,
+    1068106,
+    25451374
+   ]
+  },
+  {
+   "id": 923,
+   "claim": "Patients in stable partnerships have a slower progression from HIV to AIDS.",
+   "gold": "SUPPORTS",
+   "gold_doc": 17077004,
+   "src": "train",
+   "distractors": [
+    11230569,
+    23304931
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 23304931,
+   "order": [
+    11230569,
+    17077004,
+    23304931
+   ]
+  },
+  {
+   "id": 77,
+   "claim": "Active Ly49Q prevents neutrophil polarization.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 5531479,
+   "src": "train",
+   "distractors": [
+    52925737,
+    46517055
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 46517055,
+   "order": [
+    5531479,
+    52925737,
+    46517055
+   ]
+  },
+  {
+   "id": 1105,
+   "claim": "Students who perform poorly in the early years of medical school are at increased risk for professional misconduct later in their careers.",
+   "gold": "SUPPORTS",
+   "gold_doc": 6710713,
+   "src": "train",
+   "distractors": [
+    17374970,
+    28017005
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 17374970,
+   "order": [
+    28017005,
+    6710713,
+    17374970
+   ]
+  },
+  {
+   "id": 790,
+   "claim": "Microglia are an innate immune cell type of the peripheral nervous system.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 15493354,
+   "src": "train",
+   "distractors": [
+    17438862,
+    15889329
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 15889329,
+   "order": [
+    15889329,
+    17438862,
+    15493354
+   ]
+  },
+  {
+   "id": 1324,
+   "claim": "Treatment with a protein named FN restores regenerative abilities of aged muscles.",
+   "gold": "SUPPORTS",
+   "gold_doc": 19912367,
+   "src": "train",
+   "distractors": [
+    6334188,
+    4326318
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 6334188,
+   "order": [
+    19912367,
+    6334188,
+    4326318
+   ]
+  },
+  {
+   "id": 1228,
+   "claim": "The mean suicide rate in women is lower after miscarriage than live birth.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 25641414,
+   "src": "train",
+   "distractors": [
+    7662395,
+    881332
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 881332,
+   "order": [
+    881332,
+    25641414,
+    7662395
+   ]
+  },
+  {
+   "id": 1062,
+   "claim": "S-nitrosylated GAPDH physiologically transnitrosylates histone deacetylases.",
+   "gold": "SUPPORTS",
+   "gold_doc": 20381484,
+   "src": "dev",
+   "distractors": [
+    2831620,
+    25748308
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25748308,
+   "order": [
+    20381484,
+    2831620,
+    25748308
+   ]
+  },
+  {
+   "id": 216,
+   "claim": "CX3CR1 on the Th2 cells impairs T cell survival",
+   "gold": "CONTRADICTS",
+   "gold_doc": 21366394,
+   "src": "dev",
+   "distractors": [
+    10831818,
+    8639034
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 8639034,
+   "order": [
+    10831818,
+    21366394,
+    8639034
+   ]
+  },
+  {
+   "id": 671,
+   "claim": "Knockout proximal tubule-specific deletion of the BMP receptor Alk3 causes fibrosis.",
+   "gold": "SUPPORTS",
+   "gold_doc": 5573975,
+   "src": "train",
+   "distractors": [
+    25928548,
+    40349336
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 40349336,
+   "order": [
+    25928548,
+    5573975,
+    40349336
+   ]
+  },
+  {
+   "id": 1144,
+   "claim": "Taxation of sugar-sweetened beverages had no effect on the incidence rate of type II diabetes in India.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 10071552,
+   "src": "dev",
+   "distractors": [
+    9822397,
+    12224536
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9822397,
+   "order": [
+    9822397,
+    12224536,
+    10071552
+   ]
+  },
+  {
+   "id": 1182,
+   "claim": "The Snf1 complex regulates carbon and energy metabolism in baker's yeast (Saccharomyces cerevisiae).",
+   "gold": "SUPPORTS",
+   "gold_doc": 14541844,
+   "src": "train",
+   "distractors": [
+    8909176,
+    13613916
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 8909176,
+   "order": [
+    13613916,
+    14541844,
+    8909176
+   ]
+  },
+  {
+   "id": 998,
+   "claim": "Pyridostatin prevents double-strand breaks accumulation.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16472469,
+   "src": "train",
+   "distractors": [
+    27635177,
+    1941721
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 27635177,
+   "order": [
+    1941721,
+    27635177,
+    16472469
+   ]
+  },
+  {
+   "id": 670,
+   "claim": "Knockout proximal tubule-specific deletion of the BMP receptor Alk3 causes epithelial damage.",
+   "gold": "SUPPORTS",
+   "gold_doc": 5573975,
+   "src": "train",
+   "distractors": [
+    25928548,
+    40349336
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 25928548,
+   "order": [
+    5573975,
+    25928548,
+    40349336
+   ]
+  },
+  {
+   "id": 1156,
+   "claim": "The DESMOND program caused substantial weight loss in most participants.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12584053,
+   "src": "train",
+   "distractors": [
+    22922353,
+    40949706
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 22922353,
+   "order": [
+    22922353,
+    40949706,
+    12584053
+   ]
+  },
+  {
+   "id": 621,
+   "claim": "Individuals with Alzheimers who participate in six months of physical activity improve cognitive function for up to 18 months.",
+   "gold": "SUPPORTS",
+   "gold_doc": 1642727,
+   "src": "train",
+   "distractors": [
+    37156349,
+    15678772
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 15678772,
+   "order": [
+    1642727,
+    15678772,
+    37156349
+   ]
+  },
+  {
+   "id": 338,
+   "claim": "Dexamethasone decreases risk of postoperative bleeding.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 23349986,
+   "src": "dev",
+   "distractors": [
+    24211561,
+    36288526
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24211561,
+   "order": [
+    23349986,
+    36288526,
+    24211561
+   ]
+  },
+  {
+   "id": 314,
+   "claim": "Deamination of cytidine to uridine on the minus strand of viral DNA results in catastrophic G-to-A mutations in the viral genome.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4347374,
+   "src": "dev",
+   "distractors": [
+    544971,
+    2638387
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 544971,
+   "order": [
+    2638387,
+    4347374,
+    544971
+   ]
+  },
+  {
+   "id": 764,
+   "claim": "Medications to treat obesity are highly effective.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 7552215,
+   "src": "train",
+   "distractors": [
+    11481946,
+    437924
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 437924,
+   "order": [
+    11481946,
+    7552215,
+    437924
+   ]
+  },
+  {
+   "id": 625,
+   "claim": "Induced hepatic stem cells possess the potential to differentiate into hepatocytic cells.",
+   "gold": "SUPPORTS",
+   "gold_doc": 20033112,
+   "src": "train",
+   "distractors": [
+    8790729,
+    27588420
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 27588420,
+   "order": [
+    27588420,
+    20033112,
+    8790729
+   ]
+  },
+  {
+   "id": 169,
+   "claim": "Bariatric surgery reduces postmenopausal breast cancer.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 5824985,
+   "src": "train",
+   "distractors": [
+    7627167,
+    15559582
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 7627167,
+   "order": [
+    5824985,
+    15559582,
+    7627167
+   ]
+  },
+  {
+   "id": 933,
+   "claim": "Pediatric SCD patients with vaso-occlusive crisis show increased morphine use after breathing 80 ppm iNO for 4 hours.",
+   "gold": "SUPPORTS",
+   "gold_doc": 14711483,
+   "src": "train",
+   "distractors": [
+    23349986,
+    10984005
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 10984005,
+   "order": [
+    23349986,
+    14711483,
+    10984005
+   ]
+  },
+  {
+   "id": 171,
+   "claim": "Basophils counteract disease development in patients with systemic lupus erythematosus (SLE).",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12670680,
+   "src": "dev",
+   "distractors": [
+    14938990,
+    28015516
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 28015516,
+   "order": [
+    12670680,
+    14938990,
+    28015516
+   ]
+  },
+  {
+   "id": 857,
+   "claim": "Nonsteroidal antinflammatory drugs show potential anticancer indications.",
+   "gold": "SUPPORTS",
+   "gold_doc": 43334921,
+   "src": "train",
+   "distractors": [
+    32421068,
+    2158516
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 2158516,
+   "order": [
+    2158516,
+    32421068,
+    43334921
+   ]
+  },
+  {
+   "id": 1355,
+   "claim": "V-9302 inhibits antitumor responses by decreasing cell death and oxidative stress.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 5256564,
+   "src": "train",
+   "distractors": [
+    24185667,
+    14496749
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14496749,
+   "order": [
+    24185667,
+    14496749,
+    5256564
+   ]
+  },
+  {
+   "id": 547,
+   "claim": "IL-10 production by monocytes inhibits CD4 + T cell response.",
+   "gold": "SUPPORTS",
+   "gold_doc": 10648422,
+   "src": "train",
+   "distractors": [
+    8639034,
+    5800138
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 8639034,
+   "order": [
+    8639034,
+    10648422,
+    5800138
+   ]
+  },
+  {
+   "id": 1373,
+   "claim": "Walking in traffic areas in London improves lung function in elderly adults.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 21003930,
+   "src": "train",
+   "distractors": [
+    53779698,
+    25175997
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 53779698,
+   "order": [
+    21003930,
+    53779698,
+    25175997
+   ]
+  },
+  {
+   "id": 333,
+   "claim": "Depletion of T-helper 17 (Th17) cells during simian immunodeficiency virus (SIV) infection increases dissemination of Salmonella Typhimurium from the gut.",
+   "gold": "SUPPORTS",
+   "gold_doc": 29023309,
+   "src": "train",
+   "distractors": [
+    8300657,
+    1071991
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1071991,
+   "order": [
+    1071991,
+    29023309,
+    8300657
+   ]
+  },
+  {
+   "id": 119,
+   "claim": "Antidepressants increase the severity of migraines.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 14606752,
+   "src": "train",
+   "distractors": [
+    5691302,
+    6083952
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5691302,
+   "order": [
+    6083952,
+    5691302,
+    14606752
+   ]
+  },
+  {
+   "id": 549,
+   "claim": "IRG1 has antiviral effects against neurotropic viruses.",
+   "gold": "SUPPORTS",
+   "gold_doc": 9433958,
+   "src": "dev",
+   "distractors": [
+    9539248,
+    1970884
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1970884,
+   "order": [
+    1970884,
+    9539248,
+    9433958
+   ]
+  },
+  {
+   "id": 532,
+   "claim": "Hyperfibrinogenemia decreases rates of femoropopliteal bypass thrombosis.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 12991445,
+   "src": "dev",
+   "distractors": [
+    79231308,
+    1387104
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 79231308,
+   "order": [
+    1387104,
+    79231308,
+    12991445
+   ]
+  },
+  {
+   "id": 841,
+   "claim": "Natriuretic peptides protect against diabetes.",
+   "gold": "SUPPORTS",
+   "gold_doc": 15663829,
+   "src": "train",
+   "distractors": [
+    20132778,
+    9278263
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9278263,
+   "order": [
+    20132778,
+    9278263,
+    15663829
+   ]
+  },
+  {
+   "id": 166,
+   "claim": "Bariatric surgery leads to negative outcomes in mental health.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 18872233,
+   "src": "train",
+   "distractors": [
+    19071857,
+    29022271
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 29022271,
+   "order": [
+    18872233,
+    29022271,
+    19071857
+   ]
+  },
+  {
+   "id": 1346,
+   "claim": "Upon developing tyrosine-kinase inhibitor resistance, new mutations in epidermal growth factor receptors emerge and cause treatment failure.",
+   "gold": "SUPPORTS",
+   "gold_doc": 9505402,
+   "src": "train",
+   "distractors": [
+    9929089,
+    34066665
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 9929089,
+   "order": [
+    34066665,
+    9929089,
+    9505402
+   ]
+  },
+  {
+   "id": 516,
+   "claim": "High levels of CRP reduces the risk of exacerbations in chronic obstructive pulmonary disease (COPD).",
+   "gold": "CONTRADICTS",
+   "gold_doc": 29564505,
+   "src": "dev",
+   "distractors": [
+    20109325,
+    18988265
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 18988265,
+   "order": [
+    18988265,
+    20109325,
+    29564505
+   ]
+  },
+  {
+   "id": 1020,
+   "claim": "Rapid up-regulation and higher basal expression of interferon-induced genes increase survival of granule cell neurons that are infected by West Nile virus.",
+   "gold": "SUPPORTS",
+   "gold_doc": 9433958,
+   "src": "dev",
+   "distractors": [
+    10559501,
+    12885341
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 10559501,
+   "order": [
+    9433958,
+    10559501,
+    12885341
+   ]
+  },
+  {
+   "id": 1223,
+   "claim": "The innate immune response struggles to remove small numbers of parasites.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 5289038,
+   "src": "train",
+   "distractors": [
+    24157077,
+    26474812
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 24157077,
+   "order": [
+    26474812,
+    24157077,
+    5289038
+   ]
+  },
+  {
+   "id": 723,
+   "claim": "Ly49Q directs the organization of neutrophil migration to inflammation sites by regulating membrane raft functions.",
+   "gold": "SUPPORTS",
+   "gold_doc": 5531479,
+   "src": "dev",
+   "distractors": [
+    20608982,
+    1800734
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 1800734,
+   "order": [
+    20608982,
+    1800734,
+    5531479
+   ]
+  },
+  {
+   "id": 1260,
+   "claim": "The relationship between a breast cancer patient's capacity to metabolize tamoxifen and treatment outcome is independent of the patient's genetic make-up.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 24341590,
+   "src": "train",
+   "distractors": [
+    23284774,
+    12438901
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 12438901,
+   "order": [
+    12438901,
+    23284774,
+    24341590
+   ]
+  },
+  {
+   "id": 665,
+   "claim": "KRT17 modulates the expression of the transcriptional regulator AIRE in diseased epithelia.",
+   "gold": "SUPPORTS",
+   "gold_doc": 12580014,
+   "src": "train",
+   "distractors": [
+    39559521,
+    8354687
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 8354687,
+   "order": [
+    12580014,
+    39559521,
+    8354687
+   ]
+  },
+  {
+   "id": 801,
+   "claim": "Monoclonal antibody targeting of N-cadherin encourages castration resistance.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 22180793,
+   "src": "train",
+   "distractors": [
+    7177329,
+    36642096
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 36642096,
+   "order": [
+    7177329,
+    36642096,
+    22180793
+   ]
+  },
+  {
+   "id": 1169,
+   "claim": "The M2-phenotype in brown adipose tissue macrophages increases brown adipose tissue thermogenic activity.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4319174,
+   "src": "train",
+   "distractors": [
+    14865329,
+    29381091
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 14865329,
+   "order": [
+    14865329,
+    4319174,
+    29381091
+   ]
+  },
+  {
+   "id": 728,
+   "claim": "Ly6C hi monocytes have a lower inflammatory capacity than Ly6C lo monocytes.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 36444198,
+   "src": "dev",
+   "distractors": [
+    22406695,
+    7521113
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    true
+   ],
+   "inject_doc": 22406695,
+   "order": [
+    7521113,
+    22406695,
+    36444198
+   ]
+  },
+  {
+   "id": 1290,
+   "claim": "There is an inverse relationship between hip fractures and statin use.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4687948,
+   "src": "dev",
+   "distractors": [
+    16812091,
+    2391552
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 2391552,
+   "order": [
+    4687948,
+    16812091,
+    2391552
+   ]
+  },
+  {
+   "id": 772,
+   "claim": "Mice are incapable of producing neutralizing antibodies in reponse to the Chikungunya virus (CHIKV) produced in mosquitos.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 24922825,
+   "src": "train",
+   "distractors": [
+    23915841,
+    4373433
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4373433,
+   "order": [
+    24922825,
+    4373433,
+    23915841
+   ]
+  },
+  {
+   "id": 414,
+   "claim": "Female carriers of the Apolipoprotein E4 (APOE4) allele have increased risk for Alzheimer's disease.",
+   "gold": "SUPPORTS",
+   "gold_doc": 6309659,
+   "src": "train",
+   "distractors": [
+    4709641,
+    20937018
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4709641,
+   "order": [
+    6309659,
+    4709641,
+    20937018
+   ]
+  },
+  {
+   "id": 1320,
+   "claim": "Transplanted human glial progenitor cells are incapable of forming a neural network with host animals' neurons.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 16284655,
+   "src": "dev",
+   "distractors": [
+    16375102,
+    16572581
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 16572581,
+   "order": [
+    16284655,
+    16375102,
+    16572581
+   ]
+  },
+  {
+   "id": 380,
+   "claim": "Enhanced early production of inflammatory chemokines improves viral control in the lung.",
+   "gold": "SUPPORTS",
+   "gold_doc": 19005293,
+   "src": "dev",
+   "distractors": [
+    17223891,
+    10648422
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 17223891,
+   "order": [
+    10648422,
+    17223891,
+    19005293
+   ]
+  },
+  {
+   "id": 765,
+   "claim": "Medications to treat obesity do not have side effects.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 7552215,
+   "src": "train",
+   "distractors": [
+    11481946,
+    5839365
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 5839365,
+   "order": [
+    5839365,
+    7552215,
+    11481946
+   ]
+  },
+  {
+   "id": 1216,
+   "claim": "The extracellular domain of TMEM27 is cleaved in human beta cells.",
+   "gold": "SUPPORTS",
+   "gold_doc": 24142891,
+   "src": "dev",
+   "distractors": [
+    20943272,
+    4407455
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 20943272,
+   "order": [
+    20943272,
+    4407455,
+    24142891
+   ]
+  },
+  {
+   "id": 743,
+   "claim": "Macrolides protect against myocardial infarction.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 32159283,
+   "src": "dev",
+   "distractors": [
+    34873974,
+    43629704
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 43629704,
+   "order": [
+    34873974,
+    43629704,
+    32159283
+   ]
+  },
+  {
+   "id": 109,
+   "claim": "An M2-like phenotype in brown adipose tissue macrophages is quickly induced by cold exposure.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4319174,
+   "src": "train",
+   "distractors": [
+    29381091,
+    32955023
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 29381091,
+   "order": [
+    4319174,
+    29381091,
+    32955023
+   ]
+  },
+  {
+   "id": 1103,
+   "claim": "Stroke patients with prior use of direct oral anticoagulants have a higher risk of in-hospital mortality than stroke patients with prior use of warfarin.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 3898784,
+   "src": "train",
+   "distractors": [
+    32328114,
+    11718220
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 32328114,
+   "order": [
+    11718220,
+    3898784,
+    32328114
+   ]
+  },
+  {
+   "id": 236,
+   "claim": "Cell autonomous sex determination in somatic cells occurs in Passeriformes.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4388470,
+   "src": "dev",
+   "distractors": [
+    28390999,
+    7426741
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 28390999,
+   "order": [
+    7426741,
+    28390999,
+    4388470
+   ]
+  },
+  {
+   "id": 308,
+   "claim": "DUSP4 downregulation deactivates the Ras-ERK pathway",
+   "gold": "CONTRADICTS",
+   "gold_doc": 7821634,
+   "src": "train",
+   "distractors": [
+    28651643,
+    9225850
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 28651643,
+   "order": [
+    7821634,
+    28651643,
+    9225850
+   ]
+  },
+  {
+   "id": 1012,
+   "claim": "Radioiodine treatment of non-toxic multinodular goitre reduces thyroid volume.",
+   "gold": "SUPPORTS",
+   "gold_doc": 9745001,
+   "src": "dev",
+   "distractors": [
+    26026009,
+    43122426
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 26026009,
+   "order": [
+    9745001,
+    26026009,
+    43122426
+   ]
+  },
+  {
+   "id": 680,
+   "claim": "Lack of FGF21 in mice increases life expectancy.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 9315213,
+   "src": "train",
+   "distractors": [
+    74137632,
+    21232018
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 21232018,
+   "order": [
+    21232018,
+    74137632,
+    9315213
+   ]
+  },
+  {
+   "id": 1056,
+   "claim": "Rotator cuff exercises are more effective than general exercise therapy in reducing pain and improving function of the shoulder.",
+   "gold": "SUPPORTS",
+   "gold_doc": 4200695,
+   "src": "train",
+   "distractors": [
+    38493521,
+    42950029
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 38493521,
+   "order": [
+    38493521,
+    42950029,
+    4200695
+   ]
+  },
+  {
+   "id": 778,
+   "claim": "Mice lacking Sirt1 in Sf1-expressing neurons are immune to diet-induced obesity and insulin resistance.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 13001323,
+   "src": "train",
+   "distractors": [
+    10889845,
+    14116046
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 10889845,
+   "order": [
+    10889845,
+    13001323,
+    14116046
+   ]
+  },
+  {
+   "id": 34,
+   "claim": "A deficiency of folate increases blood levels of homocysteine.",
+   "gold": "SUPPORTS",
+   "gold_doc": 11705328,
+   "src": "train",
+   "distractors": [
+    42441846,
+    8595678
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 42441846,
+   "order": [
+    11705328,
+    8595678,
+    42441846
+   ]
+  },
+  {
+   "id": 1370,
+   "claim": "Vitamin D deficiency is unrelated to birth weight.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 2425364,
+   "src": "dev",
+   "distractors": [
+    30720103,
+    23267371
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 30720103,
+   "order": [
+    2425364,
+    23267371,
+    30720103
+   ]
+  },
+  {
+   "id": 39,
+   "claim": "A diminished ovarian reserve does not solely indicate infertility in an a priori non-infertile population.",
+   "gold": "SUPPORTS",
+   "gold_doc": 13497630,
+   "src": "train",
+   "distractors": [
+    34198460,
+    11109043
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 11109043,
+   "order": [
+    13497630,
+    34198460,
+    11109043
+   ]
+  },
+  {
+   "id": 1382,
+   "claim": "aPKCz causes tumour enhancement by affecting glutamine metabolism.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 17755060,
+   "src": "dev",
+   "distractors": [
+    3831884,
+    4138659
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 4138659,
+   "order": [
+    4138659,
+    17755060,
+    3831884
+   ]
+  },
+  {
+   "id": 1390,
+   "claim": "mcm 5 s 2 U is required for proper decoding of NNR codons in eukaryotes.",
+   "gold": "SUPPORTS",
+   "gold_doc": 2890952,
+   "src": "train",
+   "distractors": [
+    34498325,
+    13552682
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 13552682,
+   "order": [
+    34498325,
+    2890952,
+    13552682
+   ]
+  },
+  {
+   "id": 811,
+   "claim": "Mutant mice lacking SVCT2 have greatly increased ascorbic acid levels in both brain and adrenals.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 19799455,
+   "src": "dev",
+   "distractors": [
+    43014661,
+    7221410
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 43014661,
+   "order": [
+    19799455,
+    7221410,
+    43014661
+   ]
+  },
+  {
+   "id": 967,
+   "claim": "Pretreatment with the Arp2/3 inhibitor CK-666 affects lamelliopodia formation.",
+   "gold": "SUPPORTS",
+   "gold_doc": 8997410,
+   "src": "dev",
+   "distractors": [
+    2119889,
+    86694016
+   ],
+   "distractor_is_other_cited_doc": [
+    true,
+    false
+   ],
+   "inject_doc": 2119889,
+   "order": [
+    2119889,
+    8997410,
+    86694016
+   ]
+  },
+  {
+   "id": 317,
+   "claim": "Decreased diastolic blood pressure (DBP) is associated with abdominal aortic aneurysm.",
+   "gold": "CONTRADICTS",
+   "gold_doc": 4506414,
+   "src": "train",
+   "distractors": [
+    12549585,
+    30639847
+   ],
+   "distractor_is_other_cited_doc": [
+    false,
+    false
+   ],
+   "inject_doc": 12549585,
+   "order": [
+    4506414,
+    12549585,
+    30639847
+   ]
+  }
+ ]
+}

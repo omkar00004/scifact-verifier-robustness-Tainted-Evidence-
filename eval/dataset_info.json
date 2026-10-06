@@ -1,0 +1,20 @@
+{
+ "name": "SciFact (allenai)",
+ "url": "https://scifact.s3-us-west-2.amazonaws.com/release/latest/data.tar.gz",
+ "sha256": "11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be",
+ "bytes": 3115079,
+ "last_modified": "Tue, 26 Jan 2021 02:28:59 GMT",
+ "etag": "cb7da4d8609e30f2c7483b61aa447f7e",
+ "downloaded": "2026-10-06",
+ "corpus_docs": 5183,
+ "funnel": {
+  "labeled claims (train+dev)": 1109,
+  "with >=1 gold doc": 693,
+  "exactly 1 gold doc": 646,
+  "exactly 1 gold doc and 1 label": 646
+ },
+ "eligible": {
+  "CONTRADICTS": 221,
+  "SUPPORTS": 425
+ }
+}

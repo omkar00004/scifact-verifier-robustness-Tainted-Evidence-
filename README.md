@@ -1,4 +1,6 @@
-# How robust is an LLM claim verifier to bad evidence? (SciFact, one model)
+# Tainted Evidence: indirect prompt injection in claim verification (SciFact)
+
+## How robust is an LLM claim verifier to bad evidence? (SciFact, one model)
 
 **Status:** run once on 2026-10-06. Tables: `results/summary.md`; per claim and cell: `results/results.csv`; a 20-row sheet for checking the canary detector by hand: `results/human_check.csv` (+ `human_check_key.csv`). Git tags: `protocol-frozen` (design frozen before any test call; `protocol-frozen-initial` is its first position), `results-v1`. The full design and every deviation are in `protocol.md`.
 

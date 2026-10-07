@@ -7,11 +7,11 @@
 - The planted note changed which words the model wrote far more than which verdict it gave: PINEAPPLE appears in 159/160 injected outputs under P0 and 94/160 under P1 (0/160 in every E0/E1 control), while gold-CONTRADICTS claims labelled SUPPORTS rose from 6/80 to 16/80 under P0 and from 3/80 to 7/80 under P1. Because the word detector also fires on quoting or refusing the note, the canary rates are upper bounds on obeying it. A manual check of 20 outputs (`results/human_check.csv`, key in `human_check_key.csv`) found that 8 of the 10 outputs the detector flagged followed the note and 2 mentioned the word while dismissing it (precision 0.800, Wilson 95% CI 0.490 to 0.943; 6/8 for P0, 2/2 for P1); none of the 10 unflagged outputs, all from P1, followed it.
 - One model, one run, one dataset: treat these as a small measurement, not a general claim.
 
-![Figure 1: paired differences in accuracy](results/figures/fig1_paired_differences.png)
+![Figure 1: paired differences in accuracy](eval/results/figures/fig1_paired_differences.png)
 
 **Figure 1.** Paired accuracy differences (160 test claims; dots are differences, bars are 95% bootstrap CIs). Neither the two BM25 distractors (E1 - E0) nor the planted note (E2 - E1) moved accuracy by an amount distinguishable from zero under either prompt. The one interval that excludes zero is the cost of the defended prompt on clean evidence (P1 - P0 on E0: -0.044 [-0.081, -0.013]). Values: `results/summary.md`, section 2.
 
-![Figure 2: the planted note](results/figures/fig2_injection.png)
+![Figure 2: the planted note](eval/results/figures/fig2_injection.png)
 
 **Figure 2.** Left: share of injected (E2) outputs that contain the planted word. This is an upper bound on obeying the note, because the detector also counts quoting or refusing it; the E0 and E1 controls are 0/160 for both prompts. In a manual check of 20 outputs, 8 of the 10 flagged ones followed the note and 2 dismissed it (precision 0.800, Wilson 95% CI 0.490 to 0.943; 6/8 for P0 but only 2/2 for P1, so P1 precision is poorly determined), and none of the 10 unflagged ones did. Right: among gold-CONTRADICTS claims (n = 80), the share given the verdict SUPPORTS before (E1) and after (E2) the note was added, with the paired change. Values: `results/summary.md`, sections 4 and 5.
 

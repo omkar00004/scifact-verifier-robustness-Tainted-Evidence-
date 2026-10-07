@@ -156,7 +156,7 @@ b.legend(handles=[Line2D([0], [0], marker="o", ls="", markerfacecolor=SURFACE, m
                   Line2D([0], [0], marker="o", ls="", color=INK2, mec=SURFACE, mew=1.8, ms=MS, label="E2  injected note")],
          loc="lower right", frameon=False, fontsize=8.5, labelcolor=INK2, handletextpad=0.3, borderaxespad=0.2)
 
-fig.text(0.012, 0.975, "In this setup the planted note changed the wording far more than the verdicts", fontsize=13, fontweight="bold", color=INK, va="top")
+fig.text(0.012, 0.975, "Effect of the planted note on the output text and on the verdicts", fontsize=13, fontweight="bold", color=INK, va="top")
 fig.text(0.012, 0.915, f"{N} SciFact test claims, Llama 3.3 70B Instruct (FP8). Dots: rate; bars: 95% bootstrap CI (10,000 resamples).",
          fontsize=9, color=INK2, va="top")
 fig.legend(handles=[Line2D([0], [0], marker="o", ls="", color=COLOR[k], mec=SURFACE, mew=1.8, ms=MS, label=l)
